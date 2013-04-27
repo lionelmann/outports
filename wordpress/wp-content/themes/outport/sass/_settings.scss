@@ -1,0 +1,45 @@
+// Settings file to override Foundation variables
+
+// You can find the variables for each component at the bottom of their
+// doc page. We tried to name them to where theyd make sense just by reading them.
+// Go to http://foundation.zurb.com/docs/ to find what you need.
+
+/* Background color for the top bar */
+$topbar-bg: #fff;
+
+/* Height and margin */
+$topbar-height: 50px;
+$topbar-margin-bottom: emCalc(30px);
+
+/* Control Input height for top bar */
+$topbar-input-height: 2.45em;
+
+/* Controlling the styles for the title in the top bar */
+$topbar-title-weight: bold;
+$topbar-title-font-size: emCalc(17px);
+
+/* Set the link colors and styles for top-level nav */
+$topbar-link-color: #ccc;
+$topbar-link-weight: bold;
+$topbar-link-font-size: emCalc(13px);
+
+/* Style the top bar dropdown elements */
+$topbar-dropdown-bg: #fff;
+$topbar-dropdown-link-color: #fff;
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: #fff;
+$topbar-dropdown-toggle-alpha: 1;
+$dropdown-label-color: #fff;
+
+/* Top menu icon styles */
+$topbar-menu-link-transform: uppercase;
+$topbar-menu-link-font-size: emCalc(13px);
+$topbar-menu-link-weight: bold;
+$topbar-menu-link-color: #fff;
+$topbar-menu-icon-color: #fff;
+$topbar-menu-link-color-toggled: #fff;
+$topbar-menu-icon-color-toggled: #fff;
+
+/* Transitions and breakpoint styles */
+$topbar-transition-speed: 300ms;
+$topbar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
