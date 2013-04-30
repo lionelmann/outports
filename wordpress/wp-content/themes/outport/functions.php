@@ -369,9 +369,8 @@ function my_scripts() {
 	}
 
 #CUSTOM POST TYPE
-  if( file_exists(TEMPLATEPATH . '/cuztom/cuztom.php') ) {
-    include( TEMPLATEPATH . '/cuztom/cuztom.php' );
-  }
+	
+  locate_template('cuztom/cuztom.php', TRUE, TRUE );//(https://github.com/Gizburdt/Wordpress-Cuztom-Helper)
 
 	$slide = register_cuztom_post_type( 'Slide', array( 'supports' => array ('title', 'thumbnail')) );
 	$slide->add_taxonomy( 'Category' );
