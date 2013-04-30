@@ -369,10 +369,9 @@ function my_scripts() {
 	}
 
 #CUSTOM POST TYPE
-	
-if( file_exists( get_template_directory() . "/includes/cuztom-helper/cuztom.php" ) ) {
-    include_once( get_template_directory() . '/includes/cuztom-helper/cuztom.php' );
-  } 
+  if( file_exists(TEMPLATEPATH . '/includes/cuztom-helper/cuztom.php') ) {
+    include( TEMPLATEPATH . '/includes/cuztom-helper/cuztom.php' );
+  }
 
 	$slide = register_cuztom_post_type( 'Slide', array( 'supports' => array ('title', 'thumbnail')) );
 	$slide->add_taxonomy( 'Category' );
