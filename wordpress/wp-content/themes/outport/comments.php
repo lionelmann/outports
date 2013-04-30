@@ -4,7 +4,7 @@ die ( 'Please do not load this page directly.' );
 if ( post_password_required() ) :
 ?>
 <div id="comments">
-<div class="nopassword"><?php _e('This post is password protected. Enter the password to view comments.', 'blankslate') ?></div>
+<div class="nopassword"></div>
 </div>
 <?php
 return;
