@@ -369,8 +369,8 @@ function my_scripts() {
 	}
 
 #CUSTOM POST TYPE
-  if( file_exists(TEMPLATEPATH . '/includes/cuztom-helper/cuztom.php') ) {
-    include( TEMPLATEPATH . '/includes/cuztom-helper/cuztom.php' );
+  if( file_exists(TEMPLATEPATH . '/cuztom/cuztom.php') ) {
+    include( TEMPLATEPATH . '/cuztom/cuztom.php' );
   }
 
 	$slide = register_cuztom_post_type( 'Slide', array( 'supports' => array ('title', 'thumbnail')) );
