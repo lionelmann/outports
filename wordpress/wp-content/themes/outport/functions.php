@@ -370,7 +370,10 @@ function my_scripts() {
 
 #CUSTOM POST TYPE
 	
-	include('includes/cuztom-helper/cuztom.php'); //(https://github.com/Gizburdt/Wordpress-Cuztom-Helper)
+if( file_exists( get_template_directory() . "/includes/cuztom-helper/cuztom.php" ) ) {
+    include_once( get_template_directory() . '/includes/cuztom-helper/cuztom.php' );
+  } 
+
 	$slide = register_cuztom_post_type( 'Slide', array( 'supports' => array ('title', 'thumbnail')) );
 	$slide->add_taxonomy( 'Category' );
 	$slide->add_meta_box( 
