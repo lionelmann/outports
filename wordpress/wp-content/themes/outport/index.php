@@ -2,7 +2,7 @@
 
 <!-- Custom Banner -->
 <div>
-    <?php echo hype_slider_template(4); ?>
+    <?php echo hype_slider_template(6); ?>
 </div>
 
 <div class="row"  style="padding: 0px 0 30px 0;">
