@@ -16,3 +16,36 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "foundation";
 @import "offcanvas";
 @import "flexslider";
+
+article ul {
+	list-style: none; 
+	padding: 0; 
+	margin:0; 
+}
+
+.large-spacer-top {
+	margin-top: 25px;
+}
+
+.medium-spacer-top {
+	margin-top: 15px
+}
+
+.small-spacer-top {
+	margin-top: 5px;
+}
+
+
+
+.overlay {
+  opacity: 1;
+}
+
+.overlay:hover {
+
+  opacity: .5;
+  background-color: red;
+  background: url(http://www.relativepress.com/overlay.png) scroll;
+  transition: opacity 150ms ease-in-out 0s;
+
+}

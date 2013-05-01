@@ -46,6 +46,10 @@
 	   add_image_size( 'slider-image', 1200, 400, true ); //(hard crop mode)
 	}
 
+  if ( function_exists( 'add_image_size' ) ) {
+     add_image_size( 'home-feature', 400, 300, true ); //(hard crop mode)
+  }
+
 
 //remove inline width and height added to images
     add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
@@ -130,7 +134,7 @@ add_filter ('wp_nav_menu','strip_empty_classes');
 
 
 // add the 'has-dropdown' class to any li's that have children and add the arrows to li's with children
-
+/*
 class description_walker extends Walker_Nav_Menu
 {
 	function start_el(&$output, $item, $depth, $args)
@@ -194,7 +198,7 @@ class description_walker extends Walker_Nav_Menu
                 return parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
             }       
 }
-
+*/
 #FILTER FOR *EXCERPT* LENGTH
 
 	function excerpt($limit) {

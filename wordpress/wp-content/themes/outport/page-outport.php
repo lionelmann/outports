@@ -20,11 +20,12 @@ Template Name: Outport
 		<!-- Loop starts -->
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h1><?php the_title(); ?></h1>
+			<hr>
 			<?php the_content(); ?>
 		<?php endwhile; endif; //Loop ends ?>
 	</div>
 	
-	<div class="large-3 columns">
+	<div class="large-3 columns large-spacer-top">
 		
 		<?php
 		 	if($post->post_parent) {
@@ -37,7 +38,7 @@ Template Name: Outport
 
 		 	else {
 		  	$children = wp_list_pages("title_li=&child_of=" . $post->ID . "&echo=0");
-		  	//$titlenamer = get_the_title($post->ID);
+		  	$titlenamer = "";
 		  	}
 		  	if ($children) {
 		?>

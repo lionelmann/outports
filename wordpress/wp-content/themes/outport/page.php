@@ -22,6 +22,7 @@
 ?>
 
 <h4>Outports</h4>
+<hr>
 <ul>
             <?php 
                 foreach( $communities as $post ) :  setup_postdata($post); 

@@ -1,11 +1,11 @@
 <footer style="margin: 100px 0 15px 0; height: 250px;">
     <div class="row">
         <div class="large-4 columns">
-            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Address') ) : ?>
+            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Address') ) : ?>
             <?php endif; ?>
         </div>
         <div class="large-4 columns">
-            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer') ) : ?>
+            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Contact') ) : ?>
             <?php endif; ?>
         </div>
         <div class="large-4 columns">

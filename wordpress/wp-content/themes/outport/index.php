@@ -38,7 +38,9 @@
             <?php 
                 foreach( $communities as $post ) :  setup_postdata($post); 
             ?>
-                <li style="width: 31%; margin-bottom: 1.5%;"><a href="<?php the_permalink(); ?>"><img src="http://placehold.it/400x300&text=[<?php the_title(); ?>]" /></a></li>
+            <li style="width: 31%; margin-bottom: 1.5%;" class="overlay">
+                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'home-feature' ); ?></a>
+            </li>
             <?php endforeach; ?>
         </ul>
     </div>
