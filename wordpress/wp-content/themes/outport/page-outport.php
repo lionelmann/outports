@@ -63,7 +63,7 @@ Template Name: Outport
 		<h4>Other Outports</h4>
 		<hr>
 		<ul>
-			<?php wp_list_pages('title_li=&depth=1&exclude=4,6,8,' . $post->post_parent . ',' . $post->ID); ?>
+			<?php wp_list_pages('title_li=&depth=1&exclude=4,5,8,' . $post->post_parent . ',' . $post->ID); ?>
 		</ul>
 
 	</div>
