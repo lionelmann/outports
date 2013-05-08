@@ -6,8 +6,9 @@
 <title><?php wp_title(' | ', true, 'right'); ?></title>
 <meta name="viewport" content="width=device-width" />
 <!--<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>-->
-<link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>-->
+<link href='http://fonts.googleapis.com/css?family=Allerta+Stencil|Fjalla+One|Droid+Sans|Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
 
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/custom.modernizr.js"></script>
 <?php wp_head()?>

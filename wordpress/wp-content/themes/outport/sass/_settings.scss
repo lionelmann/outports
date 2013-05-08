@@ -5,25 +5,10 @@
 // Go to http://foundation.zurb.com/docs/ to find what you need.
 
 /* We use these to control header font styles */
-$header-font-family:                   Arial;
-$header-font-weight:                   bold;
-$header-font-style:                    normal;
-$header-font-color:                    #222;
-$header-line-height:                   1.4;
-$header-top-margin:                    .2em;
-$header-bottom-margin:                 .5em;
-$header-text-rendering:                optimizeLegibility;
-
-/* We use these to control header font sizes */
-/*$h1-font-size:                         emCalc(44px);
-$h2-font-size:                         emCalc(37px);
-$h3-font-size:                         emCalc(27px);
-$h4-font-size:                         emCalc(23px);
-$h5-font-size:                         emCalc(18px);
-$h6-font-size:                         1em;*/
+$header-font-family:                   'Allerta Stencil', sans-serif;
 
 /* We use these to style paragraphs */
-$paragraph-font-family:                'Vollkorn', serif;
+$paragraph-font-family: 'Vollkorn', serif;
 
 
 /* Background color for the top bar */
