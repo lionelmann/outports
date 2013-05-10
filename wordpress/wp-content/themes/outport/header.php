@@ -23,10 +23,10 @@
 <body>
 <div style="padding-bottom: 25px;">
 <div class="row" >
-	<div class="large-6 columns">
+	<div class="large-5 columns">
     	<h1><a  href="<?php bloginfo( 'url' ) ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png"></a></h1>
     </div>
-    <div class="large-6 columns">
+    <div class="large-7 columns">
 
 
 		<nav>
