@@ -1,6 +1,7 @@
 <?php get_header()?>
 
 <!-- Custom Banner -->
+<div class="shadow"></div>
 <div>
     <?php echo hype_slider_template(6); ?>
 </div>
