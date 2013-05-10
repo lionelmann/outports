@@ -23,12 +23,13 @@
 
 <?php 
     $args = array(
-        'sort_order' => 'ASC',
-        'sort_column' => 'post_title',
+        'order' => 'ASC',     
+        'sort_column' => 'menu_order',
         'meta_key' => '_meta_box_id_homepage',
         'meta_value' => 'on',
         'post_type' => 'page',
         'post_status' => 'publish'
+        
     ); 
     $communities = get_pages($args); 
 ?>
@@ -40,7 +41,7 @@
                 foreach( $communities as $post ) :  setup_postdata($post); 
             ?>
             <li style="width: 31%; margin-bottom: 1.5%;" class="overlay">
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'home-feature' ); ?></a>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); //the_post_thumbnail( 'home-feature' ); ?></a>
             </li>
             <?php endforeach; ?>
         </ul>
