@@ -1,3 +1,5 @@
+</div>
+
 <footer style="margin: 0px 0 15px 0; height: 250px;">
     <div class="row">
         <div class="large-4 columns">

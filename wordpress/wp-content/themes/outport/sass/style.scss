@@ -16,8 +16,25 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "foundation";
 @import "offcanvas";
 @import "flexslider";
+@import "navigation";
+@import "typography";
+
+body {
+  font-size: 16px;
+  font-family: Bitter, serif;
+  color: #555555;
+  background-color: #fffff;
+}
 
 article ul {
+  margin: 0 0 0 50px;
+}
+
+article ul li {
+  margin: 0 0 20px 0;
+}
+
+aside ul {
 	list-style: none; 
 	padding: 0; 
 	margin:0; 
@@ -48,95 +65,6 @@ article ul {
 
 }
 
-body {
-  font-size: 16px;
-  font-family: Bitter, serif;
-  color: #555555;
-  background-color: #fffff;
-}
-
-.small {
-	font-size: 0.875em; /* 14px */
-  line-height: 1.7143em; /* 24px */
-  margin-top: 1.7143em;
-  margin-bottom: 0em;}
-
-.large {
-  font-size: 1.375em; /* 22px */
-  line-height: 1.7143em; /* 24px */
-  margin-top: 1.0909em;
-  margin-bottom: 0em;}
-
-p {
-  font-size: 1em; /* 16px */
-  line-height: 1.5em; /* 24px */
-  margin: 0 0 1.5em 0;
-}
-
-h5 {
-	  font-size: 1em; /* 16px */
-  line-height: 1.5em; /* 24px */
-  margin-top: 1.5em;
-  margin-bottom: 0em;
-}
-
-h4 { font-size: 1.375em; /* 22px */
-  line-height: 1.0909em; /* 24px */
-  margin-top: 1.0909em;
-  margin-bottom: 0em;}
-
-h3 {font-size: 1.6875em; /* 27px */
-  line-height: 1.7778em; /* 48px */
-  margin-top: 0.8889em;
-  margin-bottom: 0em;}
-
-h2{font-size: 2.25em; /* 36px */
-  line-height: 1.3333em; /* 48px */
-  margin-top: 0.6667em;
-  margin-bottom: 0em;}
-
-h1 {font-size: 2.75em; /* 44px */
-  line-height: 1.0909em; /* 48px */
-  margin-top: 0.5455em;
-  margin-bottom: 0em;
-  letter-spacing:2px;}
-
-nav ul {
-    margin: 35px 0 0 0; 
-    padding: 0; 
-    list-style-type: none; 
-    float: right;
-}
-
-nav li {    
-    display: inline; 
-}
-
-nav ul li a {
-    text-decoration:none;  
-    font-family: 'Bitter', serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 4px;
-    padding: 0 0 0 20px; 
-    color: #000;
-}
-
-nav a {
-    text-decoration:none; 
-    color: blue; 
-}
-
-nav a:hover {
-    color: #FF4629; 
-}
-.active a {color: #FF4629; }
-
 .logo {
-    margin-bottom: 30px;
+    margin: 30px 0 10px 0;
 }
-.shadow {
-  @include box-shadow(red -12px 7px 10px); }
-
-
-
