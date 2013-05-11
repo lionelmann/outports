@@ -1,4 +1,4 @@
-<div class="large-3 columns" style="margin-top: 68px;">
+<div class="large-3 columns" style="margin-top: 92px;">
 	<aside>
 		
 		<?php
@@ -17,8 +17,9 @@
 			
 			if ($children) {
 		?>
-		<h5 style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 4px 0 4px 0;">RESOURCES</h5>
+
 		<ul>
+			<li style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 4px 0 4px 0; margin-top: -1px; font-weight: bold;">RESOURCES</li>
 			<?php echo $titlenamer; ?> 
 			<?php echo $children; ?>
 				<?php
@@ -46,8 +47,8 @@
 		    $communities = get_pages($args); 
 		?>
 
-		<h5 style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 4px 0 4px 0;">OUTPORTS</h5>
 		<ul>
+			<li style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 4px 0 4px 0; margin-top: -1px; font-weight: bold;">OUTPORTS</li>
 			<?php 
 				foreach( $communities as $post ) :  setup_postdata($post); 
 			?>

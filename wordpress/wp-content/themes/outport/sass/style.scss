@@ -40,6 +40,24 @@ aside ul {
 	margin:0; 
 }
 
+aside li {
+  border-bottom: 1px solid #ccc;
+  padding: 4px 0 4px 0;
+}
+
+aside li a {
+color: #949494;
+  font-size: 0.875em; /* 14px */
+    line-height: 1.7143em; /* 24px */
+    margin-top: 1.7143em;
+    margin-bottom: 0em;
+}
+
+aside li a:hover {
+color: $red;
+
+}
+
 .large-spacer-top {
 	margin-top: 25px;
 }
