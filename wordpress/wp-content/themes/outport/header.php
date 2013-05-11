@@ -6,7 +6,7 @@
 <title><?php wp_title(' | ', true, 'right'); ?></title>
 <meta name="viewport" content="width=device-width" />
 
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Vollkorn:400italic,400|Ubuntu+Condensed|Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Vollkorn:400italic,400|Ubuntu+Condensed|Bitter:400,700,400italic|Oswald:400,300' rel='stylesheet' type='text/css'>
 
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/custom.modernizr.js"></script>
 
@@ -24,11 +24,11 @@
     <header style="background-color: #F5F5F5; border-bottom: 1px solid #ddd;">
     <div style="padding-bottom: 25px;">
         <div class="row" >
-	       <div class="large-5 columns">
-    	       <a href="<?php bloginfo( 'url' ) ?>"><img class="logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png"></a>
+	       <div class="large-6 columns">
+    	       <h2><a href="<?php bloginfo( 'url' ) ?>"><!--<img class="logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png">-->Culture of Outports</a></h2>
             </div>
             
-            <div class="large-7 columns">
+            <div class="large-6 columns">
                 <nav>
     		      <?php wp_nav_menu(); ?>
     	       </nav>

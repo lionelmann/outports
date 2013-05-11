@@ -19,7 +19,7 @@
 		?>
 
 		<ul>
-			<li style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 4px 0 4px 0; margin-top: -1px; font-weight: bold;">RESOURCES</li>
+			<li style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 4px 0 4px 0; margin-top: -1px; font-family: Oswald;">RESOURCES</li>
 			<?php echo $titlenamer; ?> 
 			<?php echo $children; ?>
 				<?php
@@ -48,7 +48,7 @@
 		?>
 
 		<ul>
-			<li style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 4px 0 4px 0; margin-top: -1px; font-weight: bold;">OUTPORTS</li>
+			<li style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 4px 0 4px 0; margin-top: -1px; font-family: Oswald;">OUTPORTS</li>
 			<?php 
 				foreach( $communities as $post ) :  setup_postdata($post); 
 			?>

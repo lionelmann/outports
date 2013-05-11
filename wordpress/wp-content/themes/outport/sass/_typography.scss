@@ -30,15 +30,24 @@ h2 {
     line-height: 1.3333em; /* 48px */
     margin-top: 0.6667em;
     margin-bottom: 0em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 a {
+    color: #8f8d8d;
 }
 
 h1 {
     color: $red;
     font-size: 2.75em; /* 44px */
+    font-weight: 300;
     line-height: 1.0909em; /* 48px */
     margin-top: 0.5455em;
     margin-bottom: 0em;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .small {
