@@ -24,11 +24,11 @@
     <header style="background-color: #F5F5F5; border-bottom: 1px solid #ddd;">
     <div style="padding-bottom: 25px;">
         <div class="row" >
-	       <div class="large-6 columns">
+	       <div class="large-5 columns">
     	       <h2><a href="<?php bloginfo( 'url' ) ?>"><!--<img class="logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png">-->Culture of Outports</a></h2>
             </div>
             
-            <div class="large-6 columns">
+            <div class="large-7 columns">
                 <nav>
     		      <?php wp_nav_menu(); ?>
     	       </nav>
