@@ -1,18 +1,18 @@
 <?php get_header()?>
 
 <!-- Custom Banner -->
-<div class="shadow"></div>
 <div>
     <?php echo hype_slider_template(6); ?>
 </div>
 
-<div class="row"  style="padding: 0px 0 30px 0;">
-    <div class="large-12 columns">
-        <h4>Culture of Outports proposes that an understanding of the history and character of these communities is essential to successfully plan their future evolution, post fisheries.</h4>
-    <hr />
+<div class="row">
+    <div class="large-12 columns large">
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Statement') ) : ?>
+        <?php endif; ?>
     </div>
 </div>  
 
+<div style="background-color: #F5F5F5; margin-top: 40px; padding-bottom: 40px; border-top: 1px solid #ddd;">
 <div class="row">
     <div class="large-12 columns">
         <h3>COMMUNITIES</h3>
@@ -47,5 +47,5 @@
         </ul>
     </div>
 </div>
-
+</div>
 <?php get_footer()?>

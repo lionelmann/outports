@@ -31,6 +31,15 @@
         'after_title' => '</h5>',
     ));
 
+    register_sidebar(array(
+        'name'=>'Statement',
+        'description'   => 'This is the description',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h5 style="display:none;">',
+        'after_title' => '</h5>',
+    ));
+
 #POST THUMBNAIL SUPPORT
 
 	add_theme_support( 'post-thumbnails' );

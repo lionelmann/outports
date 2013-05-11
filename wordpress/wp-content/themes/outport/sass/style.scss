@@ -52,13 +52,19 @@ body {
   font-size: 16px;
   font-family: Bitter, serif;
   color: #555555;
-  background-color: #F8F8F8;
+  background-color: #fffff;
 }
 
 .small {
 	font-size: 0.875em; /* 14px */
   line-height: 1.7143em; /* 24px */
   margin-top: 1.7143em;
+  margin-bottom: 0em;}
+
+.large {
+  font-size: 1.375em; /* 22px */
+  line-height: 1.7143em; /* 24px */
+  margin-top: 1.0909em;
   margin-bottom: 0em;}
 
 p {
@@ -96,7 +102,7 @@ h1 {font-size: 2.75em; /* 44px */
   letter-spacing:2px;}
 
 nav ul {
-    margin: 40px 0 0 0; 
+    margin: 35px 0 0 0; 
     padding: 0; 
     list-style-type: none; 
     float: right;
@@ -127,7 +133,10 @@ nav a:hover {
 .active a {color: #FF4629; }
 
 .logo {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 .shadow {
   @include box-shadow(red -12px 7px 10px); }
+
+
+
