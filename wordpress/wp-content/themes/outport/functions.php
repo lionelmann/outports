@@ -208,7 +208,7 @@ class description_walker extends Walker_Nav_Menu
             }       
 }
 */
-#FILTER FOR *EXCERPT* LENGTH
+#FILTER FOR *EXCERPT* LENGTH example echo excerpt(25);
 
 	function excerpt($limit) {
   		$excerpt = explode(' ', get_the_excerpt(), $limit);
