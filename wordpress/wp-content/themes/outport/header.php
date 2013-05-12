@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <header style="background-color: #F5F5F5; border-bottom: 1px solid #ddd;">
+    <header style="background-color: #F5F5F5; border-bottom: 1px solid #ddd; width: 100%; position: fixed; top: 0; left: 0; z-index: 5;">
     <div style="padding-bottom: 25px;">
         <div class="row" >
 	       <div class="large-5 columns">
