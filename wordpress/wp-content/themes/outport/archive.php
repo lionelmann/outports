@@ -1,13 +1,22 @@
 <?php get_header(); ?>
-<div id="content">
-<?php the_post(); ?>
 
-<?php rewind_posts(); ?>
-<?php get_template_part( 'nav', 'above' ); ?>
-<?php while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php endwhile; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
-</div>
+<div class="row" style="margin-top: 100px;">
+
+    <div class="large-8 offset-by-1 columns">
+        <article>
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                <h1><?php the_title(); ?></h1>
+                <hr>
+                
+                <?php if ( !empty( $post->post_excerpt ) ) : ?>
+                    <p class="large"><?php echo excerpt(999); ?></p>
+                    <br>
+                <?php endif; ?>
+
+                <?php the_content(); ?>
+            <?php endwhile; endif; //Loop ends ?>
+    </article>
+	</div>
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
