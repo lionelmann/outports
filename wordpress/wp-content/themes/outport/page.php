@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="row" style="margin-top: 100px;">
+<div class="row" style="margin-top: 97px;">
 
     <div class="large-8 offset-by-1 columns">
         <article>

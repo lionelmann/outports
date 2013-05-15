@@ -6,7 +6,7 @@ Template Name: Outport
 
 <?php get_header(); ?>
 
-<div>
+<div style="margin-top: 97px;">
 	<img src="http://placehold.it/2000x600&text=[<?php the_title(); ?>]" />
 </div>
 

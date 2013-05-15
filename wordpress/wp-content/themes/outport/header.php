@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <header style="background-color: #F5F5F5; border-bottom: 1px solid #ddd; width: 100%; position: fixed; top: 0; left: 0; z-index: 5;">
+    <header style="background-color: #F5F5F5; border-bottom: 1px solid #ddd; width: 100%; position: fixed; top: 0; left: 0; z-index: 99;">
     <div style="padding-bottom: 25px;">
         <div class="row" >
 	       <div class="large-5 columns">
@@ -39,7 +39,7 @@
 
     <!-- Custom Banner -->
 
-    <div>
+    <div style="margin: 97px 0 0 0;">
         <?php if (is_home()) {
             echo hype_slider_template(6);
         } ?>
