@@ -56,7 +56,7 @@
 	}
 
   if ( function_exists( 'add_image_size' ) ) {
-     add_image_size( 'home-feature', 400, 300, true ); //(hard crop mode)
+     add_image_size( 'home-feature', 300, 300, true ); //(hard crop mode)
   }
 
 

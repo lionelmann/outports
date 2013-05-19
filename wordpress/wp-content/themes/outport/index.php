@@ -33,7 +33,7 @@
                 <?php 
                     foreach( $communities as $post ) :  setup_postdata($post); 
                 ?>
-                <li style="width: 31%; margin-bottom: 1.5%;" class="overlay">
+                <li style="width: 31%; margin-bottom: 1.5%;">
                     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'home-feature' ); ?></a>
                 </li>
                 <?php endforeach; ?>

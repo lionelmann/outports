@@ -22,13 +22,13 @@
 			<li style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 4px 0 4px 0; margin-top: -1px; font-family: Oswald;">RESOURCES</li>
 			<?php echo $titlenamer; ?> 
 			<?php echo $children; ?>
-				<?php
-					$cat = get_post_meta($post->ID, '_meta_box_id_blog', true);;
+				<?php /*
+					$cat = get_post_meta($post->ID, '_meta_box_id_blog', true);
 					$yourcat = get_category_link($cat);
 					if ($yourcat) {
 					echo '<li><a href="' . $yourcat . '">Blog</a></li>';
 					}
-				?>
+				*/ ?>
 			</ul>
 
 			<?php } ?>
