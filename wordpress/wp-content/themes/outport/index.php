@@ -10,7 +10,7 @@
 <div style="background-color: #F5F5F5; margin-top: 40px; padding-bottom: 40px; border-top: 1px solid #ddd;">
     <div class="row">
         <div class="large-12 columns">
-            <h3>COMMUNITIES</h3>
+            <h1>COMMUNITIES</h2>
         </div>
     </div>
 
@@ -28,17 +28,17 @@
     ?>
 
     <div class="row">
-        <div class="small-12 columns">
-            <ul class="inline-list">
+        <div class="small-12 columns large-spacer-top">
+            <ul class="large-block-grid-3">
                 <?php 
                     foreach( $communities as $post ) :  setup_postdata($post); 
                 ?>
-                <li style="width: 28%; margin-bottom: 1.5%;">
+                <li style=" margin-bottom: 5.5%; text-align: center;">
                     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'home-feature' ); ?></a>
                 </li>
                 <?php endforeach; ?>
             </ul>
-        </div>
+       </div>
     </div>
 </div>
 <?php get_footer()?>

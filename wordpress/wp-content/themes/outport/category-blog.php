@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Blog
+*/
+?>
+
 <?php get_header(); ?>
 
 <div class="row" style="margin-top: 100px;">
