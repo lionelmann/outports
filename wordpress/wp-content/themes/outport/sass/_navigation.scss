@@ -19,6 +19,7 @@ nav ul li a {
     padding: 0 0 0 20px; 
 }
 
-nav a:hover, .active a {
+nav a:hover, .active a, .current_page_item a, .current_page_parent a  {
     color: $red;
 }
+

@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <div class="row" style="margin-top: 100px;">
-using this page
     <div class="large-8 offset-by-1 columns">
         <article>
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

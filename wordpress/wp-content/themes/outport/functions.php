@@ -40,6 +40,7 @@
         'after_title' => '</h5>',
     ));
 
+
 #POST THUMBNAIL SUPPORT
 
 	add_theme_support( 'post-thumbnails' );
@@ -208,6 +209,8 @@ class description_walker extends Walker_Nav_Menu
             }       
 }
 */
+
+
 #FILTER FOR *EXCERPT* LENGTH example echo excerpt(25);
 
 	function excerpt($limit) {
