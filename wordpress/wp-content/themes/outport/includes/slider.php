@@ -63,7 +63,11 @@
 					//echo wp_get_attachment_image(get_post_meta(get_the_ID(), '_meta_box_id_bannerimage', true), 'slider-image');
 					//echo '<span class="banner" style="background-image:url(' . wp_get_attachment_url(get_post_thumbnail_id($post->ID)) . ')"></span>';
 					echo the_post_thumbnail('slider-image');
-					   
+					  
+					if ( get_post_meta( get_the_id(), '_meta_box_id_description', true) != '' ) { ?>
+						<p style="position: absolute; top: 10%; left: 20%; width: 60%; padding-left: 30px; font-family: Satisfy; color: white; font-size: 72px;"><?php echo get_post_meta( get_the_id(), '_meta_box_id_description', true ); ?></p>
+					<?php }
+
 					// Close off the Slide's Link if there is one
 					if ( get_post_meta( get_the_id(), '_meta_box_id_bannerlink', true) != '' ) { ?>
 						</a>
