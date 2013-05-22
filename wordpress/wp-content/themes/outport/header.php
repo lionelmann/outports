@@ -22,14 +22,14 @@
 
 <body>
     <header style="background-color: #F5F5F5; border-bottom: 1px solid #ddd; width: 100%; position: fixed; top: 0; left: 0; z-index: 99;">
-    <div style="margin-bottom: 35px;">
+    <div style="margin-bottom: 25px;">
         <div class="row">
 	       <div class="large-5 large-centered columns">
     	       <a href="<?php bloginfo( 'url' ) ?>"><img class="logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png"></a>
             </div>
         </div>
         <div class="row">
-            <div class="large-7 large-centered columns">
+            <div class="large-12 columns">
                 <nav>
     		      <?php wp_nav_menu(); ?>
     	       </nav>
@@ -40,15 +40,9 @@
 
     <!-- Custom Banner -->
 
-    <div style="margin: 168px 0 0 0;">
-        <?php if (is_home()) {
-            echo hype_slider_template(6);
-        } ?>
-
-        <?php
-             $description = get_post_meta(get_the_ID(), '_meta_box_id_description', true);
-            if ($description) : ?>
-                <h1><?php echo $description ?></h1>
-              <?php  endif;
-        ?> 
-    </div>
+    <?php if (is_home()) { ?>
+        <div style="margin: 148px 0 0 0;">
+            <?php echo hype_slider_template(6);  ?>
+        </div>  
+    <?php }  ?>
+   

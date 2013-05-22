@@ -427,7 +427,8 @@ function my_scripts() {
 				        'description'   => 'Select which blog category should be assigned to this page',
 				        'type'          => 'term_select',
 				        'args' 			=> array(
-				        	'taxonomy'	=> 'category'
+				        	'taxonomy'	=> 'category',
+                  'show_option_none' => 'None'
 		        			)
 		    			)			
 		    	)
