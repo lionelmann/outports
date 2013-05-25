@@ -20,7 +20,7 @@
 		?>
 
 		<ul>
-			<li style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 4px 0 4px 0; margin-top: -1px; font-family: Oswald;">RESOURCES</li>
+			<li style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 4px 0 4px 0; margin-top: -1px; font-family: 'Merriweather Sans';">RESOURCES</li>
 			<?php //echo $titlenamer; ?> 
 			<?php echo $children; ?>
 			<?php 
@@ -50,7 +50,7 @@
 		    //$communities = get_pages($args); 
 		?>
 <ul>
-			<li style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 4px 0 4px 0; margin-top: -1px; font-family: Oswald;">OUTPORTS</li>
+			<li style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 4px 0 4px 0; margin-top: -1px; font-family: 'Merriweather Sans';">OUTPORTS</li>
 
 <?php wp_list_pages($args) ?>
 </ul>

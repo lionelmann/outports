@@ -17,10 +17,10 @@ nav ul li a {
     margin: 4px;
     text-decoration:none;
     text-transform: uppercase;
-    padding: 0 0 0 20px; 
+    padding: 0 10px 0 10px; 
 }
 
 nav a:hover, .active a, .current_page_item a, .current_page_parent a  {
-    color: $red;
+    color: $light-gray;
 }
 

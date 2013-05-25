@@ -21,8 +21,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 body {
   font-size: 16px;
-  font-family: Bitter, serif;
-  color: #555555;
+  font-family: Brawler, serif;
+  color: $black;
   background-color: #fffff;
 }
 
@@ -54,7 +54,7 @@ aside li {
 }
 
 aside li a {
-    color: #949494;
+    color: $black;
     font-size: 0.875em; /* 14px */
     line-height: 1.7143em; /* 24px */
     margin-top: 1.7143em;
@@ -62,7 +62,7 @@ aside li a {
 }
 
 aside li a:hover {
-color: $red;
+color: $light-gray;
 
 }
 
