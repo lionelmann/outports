@@ -41,7 +41,7 @@
     <!-- Custom Banner -->
 
     <?php if (is_home()) { ?>
-        <div style="margin: 176px 0 0 0;">
+        <div style="margin: 161px 0 0 0;">
             <?php echo hype_slider_template(6);  ?>
         </div>  
     <?php }  ?>
