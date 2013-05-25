@@ -12,19 +12,26 @@
         <div class="large-12 columns">
             <h2>Blog</h2>
             <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 columns large-spacer-top">
+            <ul class="large-block-grid-3">
+                <?php
+                    $args = array( 
+                        'numberposts' => '3' 
+                    );
 
-            <?php
-                $args = array( 
-                    'numberposts' => '3' 
-                );
+                    $recent_posts = wp_get_recent_posts( $args );
+                
+                    foreach( $recent_posts as $recent ){
+                    ?>
 
-                $recent_posts = wp_get_recent_posts( $args );
-    
-                foreach( $recent_posts as $recent ){
-                    echo '<li><a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a> </li> ';
-                }
-            ?>
-            
+                    <?php
+                        echo '<li><a href="' . get_permalink($recent["ID"]) . '" >' . $recent["post_title"]. '</a></li> ';
+                    }
+                ?>
+            </ul>
         </div>
     </div>
 
