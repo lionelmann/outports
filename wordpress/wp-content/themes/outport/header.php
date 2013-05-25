@@ -43,6 +43,6 @@
     <?php if (is_home()) { ?>
         <div style="margin: 161px 0 0 0;">
             <?php echo hype_slider_template(6);  ?>
-        </div>  
+        </div>
     <?php }  ?>
    

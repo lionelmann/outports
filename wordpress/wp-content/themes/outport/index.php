@@ -10,7 +10,17 @@
 <div style="background-color: #F5F5F5; margin-top: 40px; padding-bottom: 40px; border-top: 1px solid #ddd;">
     <div class="row">
         <div class="large-12 columns">
-            <h1>COMMUNITIES</h2>
+            <h2>Blog</h2>
+            <hr>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="large-12 columns">
+            <h2>Communties</h2>
+            <hr>
         </div>
     </div>
 

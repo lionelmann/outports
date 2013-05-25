@@ -3,20 +3,21 @@
 <div class="row" style="margin-top: 190px;">
     <div class="large-8 offset-by-1 columns">
         <article>
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
             <?php
                 $category = get_the_category(); 
                 echo '<h1>' . $category[0]->cat_name . '</h1>';
             ?>
-                <hr>
+            <hr>
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <h2><a href="#"><?php the_title(); ?></a></h2>
+            <hr>
+                
                 
                 <?php if ( !empty( $post->post_excerpt ) ) : ?>
                     <p class="large"><?php echo excerpt(999); ?></p>
                     <br>
                 <?php endif; ?>
 
-                <?php the_content(); ?>
             <?php endwhile; endif; //Loop ends ?>
     </article>
 	</div>
