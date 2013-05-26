@@ -1,7 +1,7 @@
 <?php get_header()?>
 
 <div class="row">
-    <div class="large-12 columns large">
+    <div class="large-12 columns">
         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Statement') ) : ?>
         <?php endif; ?>
     </div>
@@ -9,7 +9,7 @@
 
 <div style="background-color: #F5F5F5; margin-top: 40px; padding-bottom: 40px; border-top: 1px solid #ddd;">
     <div class="row">
-        <div class="large-12 columns">
+        <div class="large-12 centered-12 columns">
             <h2>Blog</h2>
             <hr>
         </div>
@@ -25,12 +25,18 @@
                     $recent_posts = wp_get_recent_posts( $args );
                 
                     foreach( $recent_posts as $recent ){
-                    ?>
-
-                    <?php
-                        echo '<li><a href="' . get_permalink($recent["ID"]) . '" >' . $recent["post_title"]. '</a></li> ';
-                    }
                 ?>
+                <li>
+                    <?php
+                        echo '<a href="' . get_permalink($recent["ID"]) . '" >' . $recent["post_title"]. '</a><br>';
+                        echo '<i>' . mysql2date('F j, Y', $recent["post_date"]) . '</i> | ';
+                        echo $recent["post_excerpt"] . '...' . '<a href="' . get_permalink($recent["ID"]) . '" >' . 'read more</a>';
+
+                        }
+                    ?>
+                </li>
+
+                
             </ul>
         </div>
     </div>
