@@ -57,27 +57,25 @@
 	}
 
   if ( function_exists( 'add_image_size' ) ) {
-     add_image_size( 'home-feature', 300, 300, true ); //(hard crop mode)
+     add_image_size( 'home-feature', 310, 220, true ); //(hard crop mode)
   }
 
 
-//remove inline width and height added to images
+//Remove inline width and height added to images
     add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
     add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
-    // Removes attached image sizes as well
+
+//Removes attached image sizes as well
     add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
     function remove_thumbnail_dimensions( $html ) {
             $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
             return $html;
     }
 
+//Add page excerpt support
+    add_post_type_support( 'page', 'excerpt' );
 
-#PAGE EXCERPT SUPPORT
-
-	add_post_type_support( 'page', 'excerpt' );
-
-#CUSTOM MENU SUPPORT
-
+#Register custom menu support
 	add_theme_support( 'menus' );
 	if ( function_exists( 'register_nav_menus' ) ) {
 	  	register_nav_menus(
@@ -143,75 +141,7 @@ function strip_empty_classes($menu) {
 add_filter ('wp_nav_menu','strip_empty_classes');
 
 
-// add the 'has-dropdown' class to any li's that have children and add the arrows to li's with children
-/*
-class description_walker extends Walker_Nav_Menu
-{
-	function start_el(&$output, $item, $depth, $args)
-	{
-            global $wp_query;
-            $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-            
-            $class_names = $value = '';
-            
-            // If the item has children, add the dropdown class for foundation
-            if ( $args->has_children ) {
-                $class_names = "has-dropdown";
-            }
-            
-            $classes = empty( $item->classes ) ? array() : (array) $item->classes;
-            
-            $class_names .= join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
-            $class_names = ' class="'. esc_attr( $class_names ) . '"';
-           
-            //$output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
-            
-            $output .= $indent . '<li'. $value . $class_names . '>';
-
-            $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-            $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-            $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-            $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-            //if the item has children add these two attributes to the anchor tag
-            if ( $args->has_children ) {
-            $attributes .= 'class="dropdown-toggle" data-toggle="dropdown"';
-            }
-
-            $item_output = $args->before;
-            $item_output .= '<a'. $attributes .'>';
-            $item_output .= $args->link_before .apply_filters( 'the_title', $item->title, $item->ID );
-            $item_output .= $args->link_after;
-            // if the item has children add the caret just before closing the anchor tag
-            if ( $args->has_children ) {
-                //$item_output .= '</a><a href="#" class="flyout-toggle"><span> </span></a>';
-                $item_output .= '</a>';
-            }
-            else{
-                $item_output .= '</a>';
-            }
-            $item_output .= $args->after;
-
-            $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-            }
-            
-        function start_lvl(&$output, $depth) {
-            $indent = str_repeat("\t", $depth);
-            $output .= "\n$indent<ul class=\"dropdown\">\n";
-        }
-            
-        function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output )
-            {
-                $id_field = $this->db_fields['id'];
-                if ( is_object( $args[0] ) ) {
-                    $args[0]->has_children = ! empty( $children_elements[$element->$id_field] );
-                }
-                return parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-            }       
-}
-*/
-
-
-#FILTER FOR *EXCERPT* LENGTH example echo excerpt(25);
+//Filter for *excerpt* length - example echo excerpt(25);
 
 	function excerpt($limit) {
   		$excerpt = explode(' ', get_the_excerpt(), $limit);
@@ -225,7 +155,7 @@ class description_walker extends Walker_Nav_Menu
   		return $excerpt;
 	}
  
-#FILTER FOR *CONTENT* LENGTH
+//Filter for *content* length
 
 	function content($limit) {
 		$content = explode(' ', get_the_content(), $limit);
@@ -241,7 +171,7 @@ class description_walker extends Walker_Nav_Menu
   		return $content;
 	}
 
-#FILTER FOR *TITLE* LENGTH
+//Filter for *title* length
 
 	function title($limit) {
   		$title = explode(' ', get_the_title(), $limit);
@@ -255,7 +185,7 @@ class description_walker extends Walker_Nav_Menu
   		return $title;
 	}
 
-#ENQUEUE SCRIPTS
+//Enqueue scripts
 function my_scripts() {
 		if (!is_admin()) {
 			wp_deregister_script('jquery');
@@ -271,7 +201,7 @@ function my_scripts() {
 	}
 	add_action('init', 'my_scripts');
 	
-#ENQUEUE STYLES
+//Enqueue styles
 
 	function my_styles() {
 		if (!is_admin()) {

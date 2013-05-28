@@ -1,7 +1,7 @@
 <?php get_header()?>
 
 <div class="row">
-    <div class="large-12 columns">
+    <div class="large-12 columns" style="text-align: center;" class="large">
         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Statement') ) : ?>
         <?php endif; ?>
     </div>
@@ -10,7 +10,7 @@
 <div style="background-color: #F5F5F5; margin-top: 40px; padding-bottom: 40px; border-top: 1px solid #ddd;">
     <div class="row">
         <div class="large-12 centered-12 columns">
-            <h2>Blog</h2>
+            <h2 style="text-align: center;">Explore</h2> 
             <hr>
         </div>
     </div>
@@ -28,9 +28,11 @@
                 ?>
                 <li>
                     <?php
+                        echo '<a href="' . get_permalink($recent["ID"]) . '" >' . get_the_post_thumbnail($recent["ID"]) . '</a>';
+
                         echo '<a href="' . get_permalink($recent["ID"]) . '" >' . $recent["post_title"]. '</a><br>';
                         echo '<i>' . mysql2date('F j, Y', $recent["post_date"]) . '</i> | ';
-                        echo $recent["post_excerpt"] . '...' . '<a href="' . get_permalink($recent["ID"]) . '" >' . 'read more</a>';
+                        echo wp_trim_words($recent["post_excerpt"], 150) . '...' . '<a href="' . get_permalink($recent["ID"]) . '" >' . 'read more</a>';
 
                         }
                     ?>
@@ -45,7 +47,7 @@
 
     <div class="row">
         <div class="large-12 columns">
-            <h2>Communties</h2>
+            <h2 style="text-align: center;">Communties</h2>
             <hr>
         </div>
     </div>
@@ -69,12 +71,24 @@
                 <?php 
                     foreach( $communities as $post ) :  setup_postdata($post); 
                 ?>
-                <li style=" margin-bottom: 5.5%; text-align: center;">
+                <li style=" margin-bottom: 5.5%;">
                     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'home-feature' ); ?></a>
+
                 </li>
+                 <div class="img-info">
+            <h4>Title</h4>
+            <p>A description about the image</p>
+        </div>
                 <?php endforeach; ?>
             </ul>
        </div>
+
+        <div class="row">
+        <div class="large-12 columns">
+            <h2 style="text-align: center;">Quality of Space</h2>
+            <hr>
+        </div>
+    </div>
     </div>
 </div>
 <?php get_footer()?>

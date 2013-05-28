@@ -6,7 +6,7 @@
 <title><?php wp_title(' | ', true, 'right'); ?></title>
 <meta name="viewport" content="width=device-width" />
 
-<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic|Oswald:400,300|Satisfy|Merriweather+Sans|Brawler' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic|Oswald:400,300|Satisfy|Merriweather+Sans' rel='stylesheet' type='text/css'>
 
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/custom.modernizr.js"></script>
 
@@ -24,7 +24,7 @@
     <header style="background-color: #F5F5F5; border-bottom: 1px solid #ddd; width: 100%; position: fixed; top: 0; left: 0; z-index: 99;">
     <div style="margin-bottom: 25px;">
         <div class="row">
-	       <div class="large-5 large-centered columns">
+	       <div class="large-12 large-centered columns" style="text-align: center">
     	       <a href="<?php bloginfo( 'url' ) ?>"><img class="logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png"></a>
             </div>
         </div>
