@@ -10,7 +10,7 @@
 <div style="background-color: #F5F5F5; margin-top: 40px; padding-bottom: 40px; border-top: 1px solid #ddd;">
     <div class="row">
         <div class="large-12 centered-12 columns">
-            <h2 style="text-align: center;">Explore</h2> 
+            <h2 style="text-align: center; ">Explore</h2> 
             <hr>
         </div>
     </div>
@@ -30,7 +30,7 @@
                     <?php
                         echo '<a href="' . get_permalink($recent["ID"]) . '" >' . get_the_post_thumbnail($recent["ID"]) . '</a>';
 
-                        echo '<a href="' . get_permalink($recent["ID"]) . '" >' . $recent["post_title"]. '</a><br>';
+                        echo '<p class="large"><a href="' . get_permalink($recent["ID"]) . '" >' . $recent["post_title"]. '</a></p><br>';
                         echo '<i>' . mysql2date('F j, Y', $recent["post_date"]) . '</i> | ';
                         echo wp_trim_words($recent["post_excerpt"], 150) . '...' . '<a href="' . get_permalink($recent["ID"]) . '" >' . 'read more</a>';
 
@@ -71,14 +71,11 @@
                 <?php 
                     foreach( $communities as $post ) :  setup_postdata($post); 
                 ?>
-                <li style=" margin-bottom: 5.5%;">
-                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'home-feature' ); ?></a>
-
+                <li style=" margin-bottom: 5.5%;" class="thumb">
+                    <?php the_post_thumbnail( 'home-feature' ); ?>
+                    <a class="text" href="<?php the_permalink(); ?>"><h2 style="color: white; padding-top: 50px;"><?php the_title(); ?></h2></a>
                 </li>
-                 <div class="img-info">
-            <h4>Title</h4>
-            <p>A description about the image</p>
-        </div>
+                
                 <?php endforeach; ?>
             </ul>
        </div>
@@ -87,6 +84,20 @@
         <div class="large-12 columns">
             <h2 style="text-align: center;">Quality of Space</h2>
             <hr>
+            <ul class="large-block-grid-12">
+            <li><img src="http://placehold.it/80x80"></li>
+            <li><img src="http://placehold.it/80x80"></li>
+            <li><img src="http://placehold.it/80x80"></li>
+            <li><img src="http://placehold.it/80x80"></li>
+            <li><img src="http://placehold.it/80x80"></li>
+            <li><img src="http://placehold.it/80x80"></li>
+            <li><img src="http://placehold.it/80x80"></li>
+            <li><img src="http://placehold.it/80x80"></li>
+            <li><img src="http://placehold.it/80x80"></li>
+            <li><img src="http://placehold.it/80x80"></li>
+            <li><img src="http://placehold.it/80x80"></li>
+            <li><img src="http://placehold.it/80x80"></li>
+            </ul>
         </div>
     </div>
     </div>
