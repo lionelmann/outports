@@ -65,7 +65,7 @@
 					//echo the_post_thumbnail('slider-image');
 					  
 					if ( get_post_meta( get_the_id(), '_meta_box_id_description', true) != '' ) { ?>
-						<p class="banner-description"><?php echo get_post_meta( get_the_id(), '_meta_box_id_description', true ); ?></p>
+						<p class="banner-description"><?php echo get_post_meta( get_the_id(), '_meta_box_id_banner_description', true ); ?></p>
 			
 					<?php }
 

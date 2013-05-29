@@ -19,7 +19,7 @@
             <ul class="large-block-grid-3">
                 <?php
                     $args = array( 
-                        'numberposts' => '3' 
+                        'numberposts' => '3'
                     );
 
                     $recent_posts = wp_get_recent_posts( $args );
