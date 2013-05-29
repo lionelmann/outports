@@ -64,7 +64,7 @@
 					echo wp_get_attachment_image(get_post_meta(get_the_ID(), '_meta_box_id_banner_image', true), 'slider-image');
 					//echo the_post_thumbnail('slider-image');
 					  
-					if ( get_post_meta( get_the_id(), '_meta_box_id_description', true) != '' ) { ?>
+					if ( get_post_meta( get_the_id(), '_meta_box_id_banner_description', true) != '' ) { ?>
 						<p class="banner-description"><?php echo get_post_meta( get_the_id(), '_meta_box_id_banner_description', true ); ?></p>
 			
 					<?php }
