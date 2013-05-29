@@ -72,6 +72,7 @@
                     foreach( $communities as $post ) :  setup_postdata($post); 
                 ?>
                 <li style=" margin-bottom: 5.5%;" class="thumb">
+                    <?php //echo wp_get_attachment_image(get_post_meta(get_the_ID(), '_meta_box_id_community_image', true), 'home-feature');?>
                     <?php the_post_thumbnail( 'home-feature' ); ?>
                     <a class="text" href="<?php the_permalink(); ?>"><h2 style="color: white; padding-top: 50px;"><?php the_title(); ?></h2></a>
                 </li>

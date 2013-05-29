@@ -36,7 +36,8 @@
         $args = array(
             'post_type' => 'slide',
             'posts_per_page' => 10,
-            'cat' => $id
+            get_query_var('term_id') => $id
+            //'cat' => $id
 				);	
 		
 		// The Query
@@ -55,17 +56,16 @@
 					<li>
 					
 					<?php // Check if there's a Slide URL given and if so let's a link to it
-					if ( get_post_meta( get_the_id(), '_meta_box_id_bannerlink', true) != '' ) { ?>
-						<a href="<?php echo esc_url( get_post_meta( get_the_id(), '_meta_box_id_bannerlink', true ) ); ?>">
+					if ( get_post_meta( get_the_id(), '_meta_box_id_banner_link', true) != '' ) { ?>
+						<a href="<?php echo esc_url( get_post_meta( get_the_id(), '_meta_box_id_banner_link', true ) ); ?>">
 					<?php }
 					
 					// The Slide's Image
-					//echo wp_get_attachment_image(get_post_meta(get_the_ID(), '_meta_box_id_bannerimage', true), 'slider-image');
-					//echo '<span class="banner" style="background-image:url(' . wp_get_attachment_url(get_post_thumbnail_id($post->ID)) . ')"></span>';
-					echo the_post_thumbnail('slider-image');
+					echo wp_get_attachment_image(get_post_meta(get_the_ID(), '_meta_box_id_banner_image', true), 'slider-image');
+					//echo the_post_thumbnail('slider-image');
 					  
 					if ( get_post_meta( get_the_id(), '_meta_box_id_description', true) != '' ) { ?>
-						<p style="position: absolute; left: 0; right: 0; text-align: center; top: 40%; font-family: Satisfy; color: white; font-size: 3.5em; text-shadow: 1px 1px 1px #888;"><?php echo get_post_meta( get_the_id(), '_meta_box_id_description', true ); ?></p>
+						<p class="banner-description"><?php echo get_post_meta( get_the_id(), '_meta_box_id_description', true ); ?></p>
 			
 					<?php }
 
