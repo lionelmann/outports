@@ -19,6 +19,9 @@
                 <?php endif; ?>
 
             <?php endwhile; endif; //Loop ends ?>
+
+
+            <?php tmhtc_paginate(); ?>
     </article>
 	</div>
 

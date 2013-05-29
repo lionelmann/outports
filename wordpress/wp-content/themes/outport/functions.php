@@ -395,3 +395,20 @@ function custom_columns( $column, $post_id ) {
 }
 
 add_action( "manage_posts_custom_column", "custom_columns", 10, 2 );
+
+function tmhtc_paginate($is_child = true){
+  global $wp_query;
+  $pagination = '';
+  $int= 9999999;
+
+  $pagination .= '<div class="pagination">';
+  $pagination .= paginate_links( array(
+        'base' => str_replace( $int, '%#%', get_pagenum_link( $int) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, get_query_var('paged') ),
+        'total' => $wp_query->max_num_pages
+  ) );
+  $pagination .= '</div>';
+
+  echo $pagination;
+}

@@ -1,7 +1,9 @@
 <?php
 
+if( ! defined( 'ABSPATH' ) ) exit;
+
 /**
- * Cuztom class to create submenus
+ * Class to register Subenu Pages
  *
  * @author 	Gijs Jorissen
  * @since 	0.4

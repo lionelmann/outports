@@ -1,21 +1,34 @@
 <?php
 
+if( ! defined( 'ABSPATH' ) ) exit;
+
 class Cuztom_Field_Multi_Select extends Cuztom_Field
-{	
-	function _output( $value )
+{
+	var $css_classes 			= array( 'cuztom-input' );
+	
+	function __construct( $field, $parent )
 	{
-		$output = '<select name="cuztom[' . $this->id_name . '][]' . $this->after . '" id="' . $this->id_name . '" class="cuztom-input" multiple="true">';
-			if( isset( $this->args['option_none'] ) && $this->args['option_none'] )
-				$output .= '<option value="0" ' . ( is_array( $value ) ? ( in_array( 0, $value ) ? 'selected="selected"' : '' ) : ( ( $value == '-1' ) ? '' : in_array( 0, $this->default_value ) ? 'selected="selected"' : '' ) ) . '>' . __( 'None', 'cuztom' ) . '</option>';
+		parent::__construct( $field, $parent );
+		
+		$this->default_value 	= (array) $this->default_value;
+	}
+
+	function _output( $value, $object )
+	{
+		$output = '<select ' . $this->output_name( 'cuztom[' . $this->id_name . '][]' . $this->after ) . ' ' . $this->output_id() . ' ' . $this->output_css_class() . ' multiple="true">';
+			if( isset( $this->args['show_option_none'] ) )
+				$output .= '<option value="0" ' . ( is_array( $value ) ? ( in_array( 0, $value ) ? 'selected="selected"' : '' ) : ( ( $value == '-1' ) ? '' : in_array( 0, $this->default_value ) ? 'selected="selected"' : '' ) ) . '>' . $this->args['show_option_none'] . '</option>';
 
 			if( is_array( $this->options ) )
 			{
 				foreach( $this->options as $slug => $name )
 				{
-					$output .= '<option value="' . Cuztom::uglify( $slug ) . '" ' . ( is_array( $value ) ? ( in_array( $slug, $value ) ? 'selected="selected"' : '' ) : ( ( $value == '-1' ) ? '' : in_array( $slug, $this->default_value ) ? 'selected="selected"' : '' ) ) . '>' . Cuztom::beautify( $name ) . '</option>';
+					$output .= '<option value="' . $slug . '" ' . ( is_array( $value ) ? ( in_array( $slug, $value ) ? 'selected="selected"' : '' ) : ( ( $value == '-1' ) ? '' : in_array( $slug, $this->default_value ) ? 'selected="selected"' : '' ) ) . '>' . Cuztom::beautify( $name ) . '</option>';
 				}
 			}
 		$output .= '</select>';
+
+		$output .= $this->output_explanation();
 
 		return $output;
 	}

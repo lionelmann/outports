@@ -26,6 +26,9 @@ jQuery(function($) {
 	// Tabs
 	$('.js-cuztom-tabs').tabs();
 
+	// Slider
+	$( ".js-slider" ).slider();
+
 	// Accordion
 	$('.js-cuztom-accordion').accordion();
 
@@ -42,20 +45,6 @@ jQuery(function($) {
 		
 		if( fields > 1 ) { field.remove(); }
 		if( fields == 2 ){ $( '.js-cuztom-sortable-item', wrap ).find('.js-cuztom-remove-sortable').remove(); }
-	});
-
-	// Remove current attached image
-	$('.cuztom-td').on( 'click', '.js-cuztom-remove-media', function()
-	{
-		var that 	= $( this ),
-			td 		= that.closest('.cuztom-td');
-
-		$( '.cuztom-preview', td ).html('');
-		$( '.cuztom-hidden', td ).val('');
-		
-		that.hide();
-		
-		return false;
 	});		
 	
 	// Add sortable
@@ -73,8 +62,9 @@ jQuery(function($) {
 		// Set new bundle array key
 		if( is_bundle )
 		{
-			new_item.find('.cuztom-input').each(function(){
+			new_item.find('.cuztom-input').each( function() {
 				$(this).attr('name', function( i, val ) { return val.replace( /\[(\d+)\]/, function( match, n ) { return "[" + ( Number(n) + 1 ) + "]"; }); })
+				$(this).attr('id', function( i, val ) { return val.replace( /\_(\d+)/, function( match, n ) { return "_" + ( Number(n) + 1 ); }); })
 			});
 		}
 		
@@ -106,7 +96,7 @@ jQuery(function($) {
 			value		= input.val(),
 
 			// Need better handling
-			context 	= cuztom.data('context'),
+			meta_type 	= cuztom.data('meta-type'),
 			id 			= cuztom.data('id');
 
 		var data = {
@@ -116,7 +106,7 @@ jQuery(function($) {
 				id_name: 	id_name,
 
 				// Need better handling
-				context:  	context,
+				meta_type:  meta_type,
 				id: 		id
 			}
 		};
@@ -126,6 +116,20 @@ jQuery(function($) {
 			input.animate({ borderColor: '#60b334' }, 200, function(){ input.animate({ borderColor: border_color }); });
 		});
 
+		return false;
+	});
+
+	// Remove current attached image
+	$('.cuztom-td').on( 'click', '.js-cuztom-remove-media', function()
+	{
+		var that 	= $( this ),
+			td 		= that.closest('.cuztom-td');
+
+		$( '.cuztom-preview', td ).html('');
+		$( '.cuztom-hidden', td ).val('');
+		
+		that.hide();
+		
 		return false;
 	});
 
