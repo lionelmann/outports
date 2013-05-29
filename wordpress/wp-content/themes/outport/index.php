@@ -19,7 +19,8 @@
             <ul class="large-block-grid-3">
                 <?php
                     $args = array( 
-                        'numberposts' => '3'
+                        'numberposts' => '3',
+                        'post_type' => array( 'post', 'community_post' )
                     );
 
                     $recent_posts = wp_get_recent_posts( $args );
