@@ -66,7 +66,7 @@
 					  
 					if ( get_post_meta( get_the_id(), '_meta_box_id_description', true) != '' ) { ?>
 						<!--<p style="position: absolute; top: 10%; left: 20%; width: 60%; padding-left: 30px; font-family: Satisfy; color: white; font-size: 72px; border: 1px solid red;"><?php echo get_post_meta( get_the_id(), '_meta_box_id_description', true ); ?></p>-->
-						<p style="position: absolute; top: 40%; left: 32%; font-family: Satisfy; color: white; font-size: 3.5em; text-shadow: 1px 1px 1px #888;"><?php echo get_post_meta( get_the_id(), '_meta_box_id_description', true ); ?></p>
+						<p style="position: absolute; left: 0; right: 0; text-align: center; top: 40%; font-family: Satisfy; color: white; font-size: 3.5em; text-shadow: 1px 1px 1px #888; border: 1px solid red;"><?php echo get_post_meta( get_the_id(), '_meta_box_id_description', true ); ?></p>
 			
 					<?php }
 
