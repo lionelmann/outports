@@ -17,8 +17,8 @@ $pages = new Cuztom_Post_Type('page');
 				'description'   => 'Select which blog category should be assigned to this page',
 				'type'          => 'term_select',
 				'args' 			=> array(
-					'taxonomy'	=> 'category',
-					'show_option_none' => '-- Select Category --'
+					'taxonomy'	=> 'community_category',
+					'show_option_none' => '-- Select Community Category --'
 		        	)
 		    	),
 		    	array(
