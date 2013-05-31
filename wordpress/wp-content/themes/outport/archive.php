@@ -1,22 +1,39 @@
 <?php get_header(); ?>
 
-<div class="row" style="margin-top: 100px;">
-
+<div class="row" style="margin-top: 160px;">
     <div class="large-8 offset-by-1 columns">
         <article>
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                <h1><?php the_title(); ?></h1>
-                <hr>
-                
-                <?php if ( !empty( $post->post_excerpt ) ) : ?>
-                    <p class="large"><?php echo excerpt(999); ?></p>
-                    <br>
-                <?php endif; ?>
+            <?php
+                $category = get_the_category(); 
+                echo '<h1>' . $category[0]->cat_name . '</h1>';
+            ?>
+            <hr>
 
-                <?php the_content(); ?>
+            <?php
+                $args = array(
+                    'post_type' => array('post','community_post')
+                    );
+
+                $query = new WP_Query($args);
+            ?>
+
+            <?php if (have_posts() ) : while (  $query->have_posts() ) :  $query->the_post(); ?>
+
+            <h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <hr>
+                
+                
+            <?php if ( !empty( $post->post_excerpt ) ) : ?>
+                <p class="large"><?php echo excerpt(999); ?></p>
+                <br>
+            <?php endif; ?>
+
             <?php endwhile; endif; //Loop ends ?>
+
+
+            <?php tmhtc_paginate(); ?>
     </article>
-	</div>
+    </div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
