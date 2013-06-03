@@ -99,10 +99,22 @@ border-radius: 200px;*/
 /*margin-right: 50px;*/
 }
 
+.attachment-team-image{
+border: none!important;
+border-radius: 200px;
+width: 150px;
+height: 150px;
+box-shadow: 0 0 0 6px white, 0 1px 2px 6px rgba(0, 0, 0, 0.2);
+margin-bottom: 30px;
+
+/*margin-right: 50px;*/
+}
+
 .thumb {
     position: relative;
     float: left
 }
+
 
 .text {
     display: none;

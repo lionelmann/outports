@@ -17,6 +17,11 @@
 //Include custom posts type. Dependent on /wp-cuztom-helper classes.
     include('includes/wp-cuztom-posts/custom-post-community.php');
 
+    //Include custom posts type. Dependent on /wp-cuztom-helper classes.
+    include('includes/wp-cuztom-posts/custom-post-team_members.php');
+
+
+
 
 //Register widgets
 	if ( function_exists('register_sidebar') )
@@ -202,8 +207,10 @@
     function my_scripts() {
 		if (!is_admin()) {
 			wp_deregister_script('jquery');
-			wp_enqueue_script('jquery', get_template_directory_uri() . '/js/vendor/jquery.js', false, '1.9.1', false);
+			wp_enqueue_script('jquery', get_template_directory_uri() . '/js/vendor/jquery.js', false, '1.9.2', false);
 			wp_enqueue_script('jquery');
+
+
 			//wp_enqueue_script('modernizer', get_template_directory_uri() . '/js/vendor/custom.modernizr.js', 'jquery', '2.6.2', false);
 			//wp_enqueue_script('offcanvas', get_template_directory_uri() . '/js/jquery.offcanvas.js', 'jquery', '1.0', false);
 			//wp_enqueue_script('tweets', get_template_directory_uri() . '/js/jquery.jtweetsanywhere-1.3.1.min.js', false, '1.3.1', false);

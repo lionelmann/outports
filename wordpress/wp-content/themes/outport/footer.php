@@ -30,7 +30,14 @@
     </div> 
 </div>
 
+<script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? '<?php bloginfo('stylesheet_directory'); ?>/js/vendor/zepto' : '<?php bloginfo('stylesheet_directory'); ?>/js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/foundation.min.js"></script>
- <?php wp_footer()?>
+<?php wp_footer()?>
+
 </body>
 </html>
