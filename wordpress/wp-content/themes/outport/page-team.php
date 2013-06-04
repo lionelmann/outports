@@ -8,6 +8,7 @@
 
 <?php 
     $args = array(
+        'posts_per_page'  => 100,
         'order' => 'ASC',     
         'sort_column' => 'menu_order',
         'post_type' => 'team_member',
