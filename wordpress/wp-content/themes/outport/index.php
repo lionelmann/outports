@@ -29,7 +29,7 @@
                 ?>
                 <li>
                     <?php
-                        echo '<div style="width:310px; height:220px; overflow:hidden;"><a href="' . get_permalink($recent["ID"]) . '" >' . get_the_post_thumbnail($recent["ID"], 'home-feature') . '</a></div>';
+                        echo '<div style="width:310px; height:220px; overflow:hidden;"><a href="' . get_permalink($recent["ID"]) . '" >' . get_the_post_thumbnail($recent["ID"], 'home-feature', array('class' => 'width100')) . '</a></div>';
 
                         echo '<p class="large"><a href="' . get_permalink($recent["ID"]) . '" >' . $recent["post_title"]. '</a></p>';
                         //echo '<i>' . mysql2date('F j, Y', $recent["post_date"]) . '</i> | ';
@@ -75,7 +75,7 @@
                 <li style=" margin-bottom: 5.5%;">
                     <?php //echo wp_get_attachment_image(get_post_meta(get_the_ID(), '_meta_box_id_community_image', true), 'home-feature');?>
                     <div class="imgWrap">
-                    <div style="width:310px; height:220px; overflow:hidden;"><?php the_post_thumbnail( 'home-feature' ); ?></div>
+                    <div style="width:310px; height:220px; overflow:hidden;"><?php the_post_thumbnail( 'home-feature', array('class' => 'width100') ); ?></div>
                     <a class="imgDescription" href="<?php the_permalink(); ?>"><h2 style="color: white; padding-top: 50px; text-align:center"><?php the_title(); ?></h2></a>
                 </div>
                 </li>
