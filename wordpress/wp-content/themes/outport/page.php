@@ -2,10 +2,13 @@
 
 <?php
 
-    $banner = wp_get_attachment_image(get_post_meta(get_the_ID(), '_meta_box_id_community_image', true), 'slider-image');
+    $banner = wp_get_attachment_url(get_post_meta(get_the_ID(), '_meta_box_id_community_image', true));
     if($banner) { ?>
         <div style="margin-top: 161px;">
-            <?php echo $banner ?>
+            <div class="row" style="height: 548px; overflow: hidden; max-width: 100%;">
+           
+            <?php echo '<img  src="' . $banner .'" />'?>
+        </div>
         </div>  
         <div class="row">
             <div class="large-8 offset-by-1 columns">

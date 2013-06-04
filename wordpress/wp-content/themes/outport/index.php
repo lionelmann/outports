@@ -29,7 +29,7 @@
                 ?>
                 <li>
                     <?php
-                        echo '<a href="' . get_permalink($recent["ID"]) . '" >' . get_the_post_thumbnail($recent["ID"]) . '</a>';
+                        echo '<a href="' . get_permalink($recent["ID"]) . '" >' . get_the_post_thumbnail($recent["ID"],array(310,220)) . '</a>';
 
                         echo '<p class="large"><a href="' . get_permalink($recent["ID"]) . '" >' . $recent["post_title"]. '</a></p><br>';
                         echo '<i>' . mysql2date('F j, Y', $recent["post_date"]) . '</i> | ';

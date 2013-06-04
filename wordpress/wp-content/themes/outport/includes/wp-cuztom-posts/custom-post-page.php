@@ -24,7 +24,7 @@ $pages = new Cuztom_Post_Type('page');
 		    	array(
 	            'name'          => 'community_image',
 	            'label'         => 'Banner',
-	            'description'   => 'Select the banner image. Images need to be at least <span style="color: red;"><b>1200px x 400px.</b></span>',
+	            'description'   => 'Select the banner image. Images need to be at least <span style="color: red;"><b>2000px wide and 500px high</b></span>',
 	            'type'          => 'image'
 	        	)			
 		    )
