@@ -110,29 +110,6 @@ margin-bottom: 30px;
 /*margin-right: 50px;*/
 }
 
-.thumb {
-    position: relative;
-    float: left
-}
-
-
-.text {
-    display: none;
-    position: absolute;
-    margin-bottom: 10px;
-    height: 95.5%;
-    left: 10;
-    bottom: 0;
-    width: 93.8%;
-    background: #999;
-    background: rgba(0,0,0,0.3);
-    text-align: center;
-
-}
-.thumb:hover .text {
-    display: block
-}
-
 .banner-description {
     position: absolute; 
     left: 0; 
@@ -143,4 +120,35 @@ margin-bottom: 30px;
     color: white; 
     font-size: 3.5em; 
     text-shadow: 1px 1px 1px #888;
+    }
+
+
+.imgWrap {
+  position: relative;
+  height: 220px;
+  width: 310px;
+}
+
+.imgDescription {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .35s ease-in-out;
+   -moz-transition: opacity .35s ease-in-out;
+   -webkit-transition: opacity .35s ease-in-out;
+  
+  
+}
+
+
+.imgWrap:hover .imgDescription {
+  visibility: visible;
+  opacity: 1;
+
 }

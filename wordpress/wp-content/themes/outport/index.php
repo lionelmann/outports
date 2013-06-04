@@ -72,10 +72,12 @@
                 <?php 
                     foreach( $communities as $post ) :  setup_postdata($post); 
                 ?>
-                <li style=" margin-bottom: 5.5%;" class="thumb">
+                <li style=" margin-bottom: 5.5%;">
                     <?php //echo wp_get_attachment_image(get_post_meta(get_the_ID(), '_meta_box_id_community_image', true), 'home-feature');?>
+                    <div class="imgWrap">
                     <div style="width:310px; height:220px; overflow:hidden;"><?php the_post_thumbnail( 'home-feature' ); ?></div>
-                    <a class="text" href="<?php the_permalink(); ?>"><h2 style="color: white; padding-top: 50px;"><?php the_title(); ?></h2></a>
+                    <a class="imgDescription" href="<?php the_permalink(); ?>"><h2 style="color: white; padding-top: 50px; text-align:center"><?php the_title(); ?></h2></a>
+                </div>
                 </li>
                 
                 <?php endforeach; ?>
