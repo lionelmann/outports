@@ -31,9 +31,9 @@
                     <?php
                         echo '<div style="width:310px; height:220px; overflow:hidden;"><a href="' . get_permalink($recent["ID"]) . '" >' . get_the_post_thumbnail($recent["ID"], 'home-feature') . '</a></div>';
 
-                        echo '<p class="large"><a href="' . get_permalink($recent["ID"]) . '" >' . $recent["post_title"]. '</a></p><br>';
-                        echo '<i>' . mysql2date('F j, Y', $recent["post_date"]) . '</i> | ';
-                        echo wp_trim_words($recent["post_excerpt"], 150) . '...' . '<a href="' . get_permalink($recent["ID"]) . '" >' . 'read more</a>';
+                        echo '<p class="large"><a href="' . get_permalink($recent["ID"]) . '" >' . $recent["post_title"]. '</a></p>';
+                        //echo '<i>' . mysql2date('F j, Y', $recent["post_date"]) . '</i> | ';
+                        //echo wp_trim_words($recent["post_excerpt"], 150) . '...' . '<a href="' . get_permalink($recent["ID"]) . '" >' . 'read more</a>';
 
                         }
                     ?>
