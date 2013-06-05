@@ -1,36 +1,80 @@
 <?php
 
-//Create slide custom post type
-	$slide = register_cuztom_post_type( 'Slide', array( 'supports' => array ('title')) );
-		$slide->add_taxonomy( 'Slide Category' );
+//Create partner custom post type
+	$partner = register_cuztom_post_type( 'Partner', array( 'supports' => array ('title', 'editor')) );
 
-		$slide->add_meta_box( 
-	    'meta_box_id',
-	    'Add Banner', 
-	    array(
-	        array(
-	            'name'          => 'banner_link',
-	            'label'         => 'Link',
-	            'description'   => 'Example: http://www.example.ca/..',
-	            'type'          => 'text'
-	        ),
-	        array(
-	            'name'          => 'banner_description',
-	            'label'         => 'Description',
-	            'description'   => 'Brief description for banner',
-	            'type'          => 'textarea'
-	        ),
-	        array(
-	            'name'          => 'banner_image',
-	            'label'         => 'Image',
-	            'description'   => 'Select the banner image. Images need to be at least <span style="color: red;"><b>1200px x 400px.</b></span>',
+		$partner->add_meta_box(
+    'meta_box_id',
+    'Column 1',
+    array(
+    	'bundle', 
+    	array(
+			array(
+				'name'          => 'partner_link',
+				'label'         => 'URL',
+				'description'   => 'Example: http://www.example.com',
+				'type'          => 'text',
+				
+		    	),
+		    array(
+	            'name'          => 'partner_logo',
+	            'label'         => 'Logo',
+	            'description'   => 'Add logo',
 	            'type'          => 'image'
-	        )
-	    )
+	        	)			
+		    )
+      	)
 	);
 
+$partner->add_meta_box(
+    'meta_box_id_2',
+    'Column 2',
+    array(
+    	'bundle', 
+    	array(
+			array(
+				'name'          => 'partner_link',
+				'label'         => 'URL',
+				'description'   => 'Example: http://www.example.com',
+				'type'          => 'text',
+				
+		    	),
+		    array(
+	            'name'          => 'partner_logo',
+	            'label'         => 'Logo',
+	            'description'   => 'Add logo',
+	            'type'          => 'image'
+	        	)			
+		    )
+      	)
+	);
+
+$partner->add_meta_box(
+    'meta_box_id_3',
+    'Column 3',
+    array(
+    	'bundle', 
+    	array(
+			array(
+				'name'          => 'partner_link',
+				'label'         => 'URL',
+				'description'   => 'Example: http://www.example.com',
+				'type'          => 'text',
+				
+		    	),
+		    array(
+	            'name'          => 'partner_logo',
+	            'label'         => 'Logo',
+	            'description'   => 'Add logo',
+	            'type'          => 'image'
+	        	)			
+		    )
+      	)
+	);
+
+
 //Organize admin columns
-	function slide_columns( $cols ) {
+	function partner_columns( $cols ) {
 	 	$cols = array(
 	    	'cb'        => '<input type="checkbox" />',
 	    	'title'     => __( 'Title', 'trans' ),
@@ -42,9 +86,9 @@
 	  return $cols;
 	}
 
-	add_filter( "manage_slide_posts_columns", "slide_columns" );
+	add_filter( "manage_partner_posts_columns", "partner_columns" );
 
-	function custom_columns( $column, $post_id ) {
+	function partner_custom_columns( $column, $post_id ) {
 	  	switch ( $column ) {
 		    case "post_thumbnail":
 		    //echo the_post_thumbnail('thumbnail');
@@ -56,10 +100,10 @@
 	  	}
 	}
 
-	add_action( "manage_posts_custom_column", "custom_columns", 10, 2 );
+	add_action( "manage_posts_partner_custom_column", "partner_custom_columns", 10, 2 );
 
 //Remove meta boxes from custom post types
-	function slide_remove_meta_boxes() {
+	function partner_remove_meta_boxes() {
 
     	//Remove wp slug blocks meta box
     	remove_meta_box( 'slugdiv', 'slide', 'normal' );

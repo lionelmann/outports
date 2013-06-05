@@ -9,13 +9,13 @@
 
 <div style="background-color: #F5F5F5; margin-top: 40px; padding-bottom: 40px; border-top: 1px solid #ddd;">
     <div class="row">
-        <div class="large-12 centered-12 columns">
+        <div class="large-12 centered-12 columns xlarge-spacer-top">
             <h2 style="text-align: center; ">Explore</h2> 
             <hr>
         </div>
     </div>
     <div class="row">
-        <div class="small-12 columns large-spacer-top">
+        <div class="small-12 columns">
             <ul class="large-block-grid-3">
                 <?php
                     $args = array( 
@@ -31,9 +31,9 @@
                     <?php
                         echo '<div style="width:310px; height:220px; overflow:hidden;"><a href="' . get_permalink($recent["ID"]) . '" >' . get_the_post_thumbnail($recent["ID"], 'home-feature', array('class' => 'width100')) . '</a></div>';
 
-                        echo '<p class="large"><a href="' . get_permalink($recent["ID"]) . '" >' . $recent["post_title"]. '</a></p>';
-                        //echo '<i>' . mysql2date('F j, Y', $recent["post_date"]) . '</i> | ';
-                        //echo wp_trim_words($recent["post_excerpt"], 150) . '...' . '<a href="' . get_permalink($recent["ID"]) . '" >' . 'read more</a>';
+                        echo '<p class="large"><a href="' . get_permalink($recent["ID"]) . '" >' . wp_trim_words($recent["post_title"], 3). '</a></p>';
+                        echo '<i style="color: #696969;">' . mysql2date('F j, Y', $recent["post_date"]) . '</i> | ';
+                        echo wp_trim_words($recent["post_excerpt"], 10) . '' . '<a href="' . get_permalink($recent["ID"]) . '" >' . 'more</a>';
 
                         }
                     ?>
@@ -47,7 +47,7 @@
 
 
     <div class="row">
-        <div class="large-12 columns">
+        <div class="large-12 columns xlarge-spacer-top">
             <h2 style="text-align: center;">Communties</h2>
             <hr>
         </div>
@@ -67,7 +67,7 @@
     ?>
 
     <div class="row">
-        <div class="small-12 columns large-spacer-top">
+        <div class="small-12 columns xlarge-spacer-top">
             <ul class="large-block-grid-3">
                 <?php 
                     foreach( $communities as $post ) :  setup_postdata($post); 
