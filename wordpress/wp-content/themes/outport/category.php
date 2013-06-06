@@ -14,15 +14,13 @@
                     'post_type'=>array(
                         'post',
                         'community_post'),
-                    //'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1)
+                    'posts_per_page' => 100,
+                    'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1)
                    )
                     
                 );
                 query_posts($args); 
-               
-
-                
-  
+            
             ?>
 
             <?php if (have_posts() ) : while (  have_posts() ) :  the_post(); ?>
@@ -34,7 +32,7 @@
                 
                 
             <?php if ( !empty( $post->post_excerpt ) ) : ?>
-                <p class="large"><?php echo excerpt(999); ?></p>
+                <p class="large"><?php echo excerpt(20); ?></p>
                 <br>
             <?php endif; ?>
 

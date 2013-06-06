@@ -87,8 +87,6 @@
         <div class="row">
         <div class="large-12 columns">
             <h2 style="text-align: center;">Quality of Space</h2>
-
-
             <hr>
             <ul class="inline-list">
 
