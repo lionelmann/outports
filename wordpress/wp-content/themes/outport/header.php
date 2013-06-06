@@ -92,7 +92,7 @@
 </head>
 
 <body>
-    <header style="background-color: #F5F5F5; border-bottom: 1px solid #ddd; width: 100%; position: fixed; top: 0; left: 0; z-index: 99;">
+    <header style="background-color: #F5F5F5; border-bottom: 1px solid #ddd; width: 100%; 0; z-index: 99;">
     <div style="margin-bottom: 25px;">
         <div class="row">
 	       <div class="large-12 large-centered columns" style="text-align: center">
@@ -112,7 +112,8 @@
     <!-- Custom Banner -->
 
     <?php if (is_home()) { ?>
-        <div style="margin: 161px 0 0 0;">
+       <!-- <div style="margin: 161px 0 0 0;">-->
+           <div>
             <?php echo hype_slider_template(100);  ?>
         </div>
     <?php }  ?>

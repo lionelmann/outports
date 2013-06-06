@@ -8,7 +8,7 @@
 
 <?php 
     $args = array(
-        'posts_per_page'  => 100,
+        'posts_per_page'  => 200,
         'post_type' => 'team_member',
         'post_status' => 'publish'
             
@@ -16,7 +16,7 @@
     $teams = get_posts($args); 
 ?>
 
-<div class="row" style="margin-top: 160px;">
+<div class="row">
     <div class="large-12 columns">
         <article>
             <h1><?php the_title(); ?></h1>

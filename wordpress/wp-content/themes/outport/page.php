@@ -4,7 +4,7 @@
 
     $banner = wp_get_attachment_url(get_post_meta(get_the_ID(), '_meta_box_id_community_image', true));
     if($banner) { ?>
-        <div style="margin-top: 161px;">
+        <div>
             <div class="row" style="height: 548px; overflow: hidden; max-width: 100%;">
            
             <?php echo '<img  src="' . $banner .'" />'?>
