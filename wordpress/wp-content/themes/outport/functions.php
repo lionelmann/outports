@@ -17,13 +17,11 @@
 //Include custom posts type. Dependent on /wp-cuztom-helper classes.
     include('includes/wp-cuztom-posts/custom-post-community.php');
 
-    //Include custom posts type. Dependent on /wp-cuztom-helper classes.
+//Include custom posts type. Dependent on /wp-cuztom-helper classes.
     include('includes/wp-cuztom-posts/custom-post-team_members.php');
 
-    //Include custom posts type. Dependent on /wp-cuztom-helper classes.
+//Include custom posts type. Dependent on /wp-cuztom-helper classes.
     include('includes/wp-cuztom-posts/custom-post-partners.php');
-
-
 
 
 //Register widgets

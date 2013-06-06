@@ -17,7 +17,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "offcanvas";
 @import "flexslider";
 @import "navigation";
+@import "aside";
 @import "typography";
+@import "jqueryui";
 
 body {
   font-size: 16px;
@@ -26,44 +28,29 @@ body {
   background-color: #fffff;
 }
 
+header {
+    background-color: #F5F5F5; 
+    border-bottom: 1px solid #ddd; 
+    width: 100%;
+    z-index: 99;
+}
+
+.banner {
+    max-height: 548px; 
+    overflow: hidden; 
+    max-width: 100%;
+}
+
 article {
-  margin-bottom: 90px;
+    margin-bottom: 90px;
 }
 
 article ul {
-  margin: 0 0 0 50px;
+    margin: 0 0 0 50px;
 }
 
 article ul li {
   margin: 0 0 20px 0;
-}
-
-aside {
-  margin: 0 0 92px 0;
-}
-
-aside ul {
-	list-style: none; 
-	padding: 0; 
-	margin:0; 
-}
-
-aside li {
-  border-bottom: 1px solid #ccc;
-  padding: 4px 0 4px 0;
-}
-
-aside li a {
-    color: $black;
-    font-size: 0.875em; /* 14px */
-    line-height: 1.7143em; /* 24px */
-    margin-top: 1.7143em;
-    margin-bottom: 0em;
-}
-
-aside li a:hover {
-color: $light-gray;
-
 }
 
 .xlarge-spacer-top {
@@ -82,36 +69,23 @@ color: $light-gray;
 	margin-top: 5px;
 }
 
-.overlay {
-  opacity: 1;
-}
-
-.overlay:hover {
-  opacity: .5;
-}
-
 .logo {
     margin: 30px 0 0 0;
 }
 
-
-.attachment-home-feature{
-/*border: none!important;
-border-radius: 200px;*/
-/*box-shadow: 0 0 0 6px white, 0 1px 2px 6px rgba(0, 0, 0, 0.2);*/
-
-/*margin-right: 50px;*/
+.attachment-team-image {
+    border: none!important;
+    border-radius: 200px;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0 0 6px white, 0 1px 2px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    opacity: 1.0;
 }
 
-.attachment-team-image{
-border: none!important;
-border-radius: 200px;
-width: 150px;
-height: 150px;
-box-shadow: 0 0 0 6px white, 0 1px 2px 6px rgba(0, 0, 0, 0.2);
-margin-bottom: 30px;
+.attachment-team-image:hover  {
+  opacity: 0.7;
 
-/*margin-right: 50px;*/
 }
 
 .banner-description {
@@ -126,47 +100,39 @@ margin-bottom: 30px;
     text-shadow: 1px 1px 1px #888;
     }
 
-
 .imgWrap {
-  position: relative;
-  height: 220px;
-  width: 310px;
+    position: relative;
+    height: 220px;
+    width: 310px;
 }
 
 .imgDescription {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(29, 106, 154, 0.72);
-  color: #fff;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .35s ease-in-out;
-   -moz-transition: opacity .35s ease-in-out;
-   -webkit-transition: opacity .35s ease-in-out;
-  
-  
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .35s ease-in-out;
+    -moz-transition: opacity .35s ease-in-out;
+    -webkit-transition: opacity .35s ease-in-out;
 }
-
 
 .imgWrap:hover .imgDescription {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
-
 .width100 {
-  width: 100%;
+    width: 100%;
 }
 
 .width100:hover {
-  opacity: 0.7;
-  transition: opacity .35s ease-in-out;
-   -moz-transition: opacity .35s ease-in-out;
-   -webkit-transition: opacity .35s ease-in-out;
+    opacity: 0.7;
+    transition: opacity .35s ease-in-out;
+    -moz-transition: opacity .35s ease-in-out;
+    -webkit-transition: opacity .35s ease-in-out;
 }
-
-.margin-top {
-  margin-top: 160px;}

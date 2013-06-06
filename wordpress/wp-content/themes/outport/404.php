@@ -1,12 +1,10 @@
 <?php get_header(); ?>
-<div id="content">
-<div id="post-0" class="post error404 not-found">
-<h1 class="entry-title"></h1>
-<div class="entry-content">
+  <div class="row">
+        <div class="large-8 offset-by-1 columns">
+            <article>
+                <h2 class="center">404 - Not Found</h2><br>
+                <p>Sorry. Looks like the page could not be found.</p>
+            </article>
+        </div>
 
-<?php get_search_form(); ?>
-</div>
-</div>
-</div>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

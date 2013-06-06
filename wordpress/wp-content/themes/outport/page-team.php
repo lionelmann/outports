@@ -22,12 +22,12 @@
             <h1><?php the_title(); ?></h1>
             <hr>
                 <div class="row">
-                    <div class="small-12 columns large-spacer-top team">
+                    <div class="small-12 columns large-spacer-top">
                         <ul class="large-block-grid-4" style="text-align: center;">
                             <?php 
                                 foreach( $teams as $post ) :  setup_postdata($post); 
                             ?>
-                            <li style=" margin-bottom: 5.5%;">
+                            <li style="margin-bottom: 5.5%;">
                                 <a href="#" title="<?php echo get_post_meta(get_the_ID(), '_team_member_team_description', true); ?>">
                                     <?php echo wp_get_attachment_image(get_post_meta(get_the_ID(), '_team_member_team_image', true), 'team-image');?><br>
                                 </span>
