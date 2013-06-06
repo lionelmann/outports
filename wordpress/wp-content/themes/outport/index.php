@@ -87,20 +87,24 @@
         <div class="row">
         <div class="large-12 columns">
             <h2 style="text-align: center;">Quality of Space</h2>
+
+
             <hr>
-            <ul class="large-block-grid-12">
-            <li><img src="http://placehold.it/80x80"></li>
-            <li><img src="http://placehold.it/80x80"></li>
-            <li><img src="http://placehold.it/80x80"></li>
-            <li><img src="http://placehold.it/80x80"></li>
-            <li><img src="http://placehold.it/80x80"></li>
-            <li><img src="http://placehold.it/80x80"></li>
-            <li><img src="http://placehold.it/80x80"></li>
-            <li><img src="http://placehold.it/80x80"></li>
-            <li><img src="http://placehold.it/80x80"></li>
-            <li><img src="http://placehold.it/80x80"></li>
-            <li><img src="http://placehold.it/80x80"></li>
-            <li><img src="http://placehold.it/80x80"></li>
+            <ul class="inline-list">
+
+               <?php
+                    $cats = get_categories();
+                    foreach ((array)$cats as $cat) {
+                        $catdesc = $cat->category_description;
+                        $catnumber = $cat->cat_ID;
+                        $photofile = (TEMPLATEPATH . '/images/icons/' . $cat->cat_ID. '.png');
+
+                        if (file_exists($photofile)){
+                            echo '<li><a href="' . get_category_link($cat) .'"><img width="56" height="56" src="' . get_bloginfo ('template_url') . '/images/icons/' . $cat->cat_ID. '.png" alt="' . $cat->cat_name . '" /></a></li>';
+                        } else 
+                            echo '';
+                        } 
+                ?>
             </ul>
         </div>
     </div>

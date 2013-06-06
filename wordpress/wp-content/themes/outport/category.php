@@ -11,7 +11,7 @@
 
             <?php
                 $args = array(
-                    'post_type' => array('post','community_post')
+                    'post_type' => array('post')
                     );
 
                 $query = new WP_Query($args);
