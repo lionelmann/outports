@@ -10,12 +10,13 @@
 
             <?php if (have_posts() ) : while (  have_posts() ) :  the_post(); ?>
 
-            <h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <hr>
+            <h3><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
+         
                     
             <?php if ( !empty( $post->post_excerpt ) ) : ?>
                 <p class="large"><?php echo excerpt(999); ?></p>
                 <br>
+                   <hr>
             <?php endif; ?>
 
             <?php endwhile; endif; //Loop ends ?>
