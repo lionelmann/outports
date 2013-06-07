@@ -5,13 +5,10 @@
 <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <title><?php wp_title(' | ', true, 'right'); ?></title>
 <meta name="viewport" content="width=device-width" />
-
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic|Oswald:400,300|Satisfy|Merriweather+Sans' rel='stylesheet' type='text/css'>
 
 <?php wp_head()?>
-
-<script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/custom.modernizr.js"></script>
 
 <script type="text/javascript" charset="utf-8">
     $(window).load(function() {
@@ -20,7 +17,6 @@
 </script>
 
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-
 <script>
     $(function() {
         $( document ).tooltip({
