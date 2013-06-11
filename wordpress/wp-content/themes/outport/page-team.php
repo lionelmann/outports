@@ -10,7 +10,9 @@
     $args = array(
         'posts_per_page'  => 200,
         'post_type' => 'team_member',
-        'post_status' => 'publish'
+        'post_status' => 'publish',
+        'order' => 'ASC',
+        'orderby' => 'menu_order'
             
     ); 
     $teams = get_posts($args); 

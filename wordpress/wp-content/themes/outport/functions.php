@@ -204,6 +204,7 @@
   		return $title;
 	}
 
+
 //Enqueue scripts
     function my_scripts() {
 		if (!is_admin()) {
@@ -211,7 +212,8 @@
 			wp_enqueue_script('jquery', get_template_directory_uri() . '/js/vendor/jquery.js', false, '1.9.2', false);
 			wp_enqueue_script('jquery');
             wp_enqueue_script('modernizer', get_template_directory_uri() . '/js/vendor/custom.modernizr.js', 'jquery', '2.6.2', false);
-			//wp_enqueue_script('offcanvas', get_template_directory_uri() . '/js/jquery.offcanvas.js', 'jquery', '1.0', false);
+            wp_enqueue_script('bxslider', get_template_directory_uri() . '/js/vendor/jquery.bxslider.min.js', 'jquery', '1.0', false);
+            //wp_enqueue_script('offcanvas', get_template_directory_uri() . '/js/jquery.offcanvas.js', 'jquery', '1.0', false);
 
 			//wp_enqueue_script('foundation', get_template_directory_uri() . '/js/foundation.min.js', false, '4.0.0', false);
 

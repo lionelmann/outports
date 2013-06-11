@@ -1,7 +1,7 @@
 <?php
 
 //Create team custom post type
-	$team_member = register_cuztom_post_type( 'Team Member', array( 'supports' => array ('title')) );
+	$team_member = register_cuztom_post_type( 'Team Member', array( 'supports' => array ('title','page-attributes')) );
 
 		$team_member->add_meta_box( 
 	    'team_member',
@@ -36,30 +36,33 @@
 		)
 	);
 
+
 //Organize admin columns
-	function team_member_columns( $cols ) {
+	function team_columns( $cols ) {
 	 	$cols = array(
 	    	'cb'        => '<input type="checkbox" />',
 	    	'title'     => __( 'Title', 'trans' ),
-	    	'post_image' => __( 'Image', 'trans' ),
+	    	'post_thumbnail' => __( 'Image', 'trans' ),
 	    	'date'      => __( 'Date', 'trans' )
 		);
 	  
 	  return $cols;
 	}
 
-	add_filter( "manage_team_member_posts_columns", "team_member_columns" );
+	add_filter( "manage_team_member_posts_columns", "team_columns" );
 
-	function custom_team_member_columns( $column, $post_id ) {
+	function customteam_columns( $column, $post_id ) {
 	  	switch ( $column ) {
-		    case "post_image":
+		    case "post_thumbnail":
 		    //echo the_post_thumbnail('thumbnail');
-			echo wp_get_attachment_image(get_post_meta(get_the_ID(), '_team_member_team_image', true));
+			echo wp_get_attachment_image(get_post_meta(get_the_ID(), '_team_member_team_image', true),'team-image');
 		    break;
+		    
 	  	}
 	}
 
-	add_action( "manage_posts_custom_team_member_column", "custom_team_member_columns", 10, 2 );
+add_action( "manage_posts_custom_column", "customteam_columns", 10, 2 );
+
 
 //Remove meta boxes from custom post types
 	function team_member_remove_meta_boxes() {

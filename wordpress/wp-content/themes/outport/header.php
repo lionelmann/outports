@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width" />
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+<link href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.bxslider.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic|Oswald:400,300|Satisfy|Merriweather+Sans' rel='stylesheet' type='text/css'>
 
 <?php wp_head()?>
@@ -35,6 +36,22 @@
             }
         });
     });
+</script>
+
+<script>
+$(document).ready(function(){
+  $('.slider1').bxSlider({
+    slideWidth: 1000,
+    minSlides: 8,
+    maxSlides: 8,
+    moveSlides: 5,
+    slideMargin: 20,
+    auto: true,
+    autoHover: true,
+    pager: true,
+    controls: false
+  });
+});
 </script>
 
 </head>

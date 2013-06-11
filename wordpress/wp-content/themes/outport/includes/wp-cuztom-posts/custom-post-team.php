@@ -1,7 +1,7 @@
 <?php
 
 //Create team custom post type
-	$team = register_cuztom_post_type( 'Team', array( 'supports' => array ('title')) );
+	$team = register_cuztom_post_type( 'Team', array( 'supports' => array ('title','page-attributes')),'hierarchical' => true );
 
 		$team->add_meta_box( 
 	    'team_meme',
