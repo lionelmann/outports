@@ -70,7 +70,7 @@
 					<?php }
 
 					// Close off the Slide's Link if there is one
-					if ( get_post_meta( get_the_id(), '_meta_box_id_bannerlink', true) != '' ) { ?>
+					if ( get_post_meta( get_the_id(), '_meta_box_id_banner_link', true) != '' ) { ?>
 						</a>
 					<?php } ?>
 					
