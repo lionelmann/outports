@@ -5,7 +5,7 @@
 
 		$partner->add_meta_box(
     'meta_box_id',
-    'Column 1',
+    'Sponsors',
     array(
     	'bundle', 
     	array(
@@ -28,7 +28,7 @@
 
 $partner->add_meta_box(
     'meta_box_id_2',
-    'Column 2',
+    'Supporters',
     array(
     	'bundle', 
     	array(
@@ -51,7 +51,7 @@ $partner->add_meta_box(
 
 $partner->add_meta_box(
     'meta_box_id_3',
-    'Column 3',
+    'Special Thanks',
     array(
     	'bundle', 
     	array(
@@ -63,10 +63,10 @@ $partner->add_meta_box(
 				
 		    	),
 		    array(
-	            'name'          => 'partner_logo',
-	            'label'         => 'Logo',
-	            'description'   => 'Add logo',
-	            'type'          => 'image'
+	            'name'          => 'partner_text',
+	            'label'         => 'Add name',
+	            'description'   => 'Add name',
+	            'type'          => 'text'
 	        	)			
 		    )
       	)

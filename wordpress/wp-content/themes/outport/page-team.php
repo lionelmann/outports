@@ -12,7 +12,7 @@
         'post_type' => 'team_member',
         'post_status' => 'publish',
         'order' => 'ASC',
-        'orderby' => 'menu_order'
+        'orderby' => 'title'
             
     ); 
     $teams = get_posts($args); 
