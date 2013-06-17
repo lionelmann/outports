@@ -9,9 +9,9 @@
 
 <div style="background-color: #F5F5F5; margin-top: 40px; padding-bottom: 40px; border-top: 1px solid #ddd;">
     <div class="row">
-        <div class="large-12 columns">
-            <h2 style="text-align: center; ">Explore</h2> 
-            <hr>
+        <div class="large-12 columns heading">
+            <h2><span>Explore</span></h2>
+            <p class="subheading">updates from the coast</p>
         </div>
     </div>
     <div class="row">
@@ -37,43 +37,42 @@
 
                         }
                     ?>
-                </li>
-
-                
+                </li>    
             </ul>
         </div>
     </div>
 
-<div class="row">
-            <div class="large-12 columns">
-                <h2 style="text-align: center;">Quality of Place</h2>
-                <hr>
-          
-                    <div class="slider1">
+    <div class="row">
+        <div class="large-12 columns heading">
+            <h2><span>Quality of Place</span></h2>
+            <p class="subheading">leveraging physical and intangible cultural heritage</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns" style="margin-top: -0.625em;">
+            <div class="slider1">
+                <?php
+                    $cats = get_categories();
+                    foreach ((array)$cats as $cat) {
+                        $catdesc = $cat->category_description;
+                        $catnumber = $cat->cat_ID;
+                        $photofile = (TEMPLATEPATH . '/images/icons/' . $cat->cat_ID. '.png');
 
-                       <?php
-                            $cats = get_categories();
-                            foreach ((array)$cats as $cat) {
-                                $catdesc = $cat->category_description;
-                                $catnumber = $cat->cat_ID;
-                                $photofile = (TEMPLATEPATH . '/images/icons/' . $cat->cat_ID. '.png');
-
-                                if (file_exists($photofile)){
-                                    //echo '<li><a href="' . get_category_link($cat) .'"><img width="100" height="100" src="' . get_bloginfo ('template_url') . '/images/icons/' . $cat->cat_ID. '.png" alt="' . $cat->cat_name . '" /></a></li>';
-                                    echo '<div class="slide"><a href="' . get_category_link($cat) . '" title="'. strip_tags($catdesc) .'"><img width="100" height="100" style="margin-bottom: 10px;" src="' . get_bloginfo ('template_url') . '/images/icons/' . $cat->cat_ID. '.png" alt="' . $cat->cat_name . '" /></a><div style="text-align:center; width: 100px; height: 50px;"><a href="'. get_category_link($cat).'" title="'. strip_tags($catdesc) .'">'. $cat->cat_name . '</a></div></div>';
-
+                        if (file_exists($photofile)){
+                            //echo '<li><a href="' . get_category_link($cat) .'"><img width="100" height="100" src="' . get_bloginfo ('template_url') . '/images/icons/' . $cat->cat_ID. '.png" alt="' . $cat->cat_name . '" /></a></li>';
+                            echo '<div class="slide"><a href="' . get_category_link($cat) . '" title="'. strip_tags($catdesc) .'"><img width="100" height="100" style="margin-bottom: 10px;" src="' . get_bloginfo ('template_url') . '/images/icons/' . $cat->cat_ID. '.png" alt="' . $cat->cat_name . '" /></a><div style="text-align:center; width: 100px; height: 50px;"><a href="'. get_category_link($cat).'" title="'. strip_tags($catdesc) .'">'. $cat->cat_name . '</a></div></div>';
                                 } else 
-                                    echo '';
-                                } 
-                        ?>
-                    </div>
+                                echo '';
+                            } 
+                ?>
             </div>
         </div>
+    </div>
 
     <div class="row">
-        <div class="large-12 columns">
-            <h2 style="text-align: center;">Communities</h2>
-            <hr>
+        <div class="large-12 columns heading">
+            <h2><span>Communities</span></h2>
+            <p class="subheading">building sustainable places together</p>
         </div>
     </div>
 
@@ -103,12 +102,10 @@
                     <a class="imgDescription" href="<?php the_permalink(); ?>"><h2 style="color: white; padding-top: 50px; text-align:center"><?php the_title(); ?></h2></a>
                 </div>
                 </li>
-                
                 <?php endforeach; ?>
             </ul>
         </div>
-
-        
     </div>
+
 </div>
 <?php get_footer()?>

@@ -53,6 +53,30 @@ h2 a {
     color: #8f8d8d;
 }
 
+.heading h2 {
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.heading h2:before {
+    border-top: 1px solid #ccc;
+    content:"";
+    margin: 0 auto;
+    position: absolute;
+    top: 24px; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.heading h2 span { background: #F5F5F5; padding: 0 10px; }
+
+.subheading{
+    font-family: Satisfy;
+    text-align: center;
+}
+
 h1 {
     color: $black;
     font-size: 2.75em; /* 44px */

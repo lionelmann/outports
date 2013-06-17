@@ -36,6 +36,10 @@ header {
     z-index: 99;
 }
 
+.heading {
+    margin-bottom: 10px;
+}
+
 .banner {
     max-height: 548px; 
     overflow: hidden; 
@@ -121,6 +125,7 @@ article ul li {
     -moz-transition: opacity .35s ease-in-out;
     -webkit-transition: opacity .35s ease-in-out;
 }
+
 
 .imgWrap:hover .imgDescription {
     visibility: visible;

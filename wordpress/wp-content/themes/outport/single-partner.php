@@ -29,7 +29,7 @@
 
             <div class="row">
                 <div class="large-12 columns">
-                    <h3>Supporters</h3>
+                    <h2>Supporters</h2>
                     <hr>
                     <ul class="large-block-grid-3">
 
@@ -46,9 +46,9 @@
 
             <div class="row">
                 <div class="large-12 columns">
-                    <h3>Special Thanks</h3>
+                    <h2>Special Thanks</h2>
                     <hr>
-                    <ul class="large-block-grid-5">
+                    <ul class="no-bullet">
 
                     <?php 
                         $partner3 = get_post_meta($post->ID, 'meta_box_id_3', true);
