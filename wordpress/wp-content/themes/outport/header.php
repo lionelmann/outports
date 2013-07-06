@@ -5,7 +5,6 @@
 <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <title><?php wp_title(' | ', true, 'right'); ?></title>
 <meta name="viewport" content="width=device-width" />
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 <link href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.bxslider.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic|Oswald:400,300|Satisfy|Merriweather+Sans' rel='stylesheet' type='text/css'>
@@ -15,26 +14,6 @@
 <script type="text/javascript" charset="utf-8">
     $(window).load(function() {
     $('.flexslider').flexslider();
-    });
-</script>
-
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script>
-    $(function() {
-        $( document ).tooltip({
-        position: {
-        my: "center bottom-20",
-        at: "center top",
-        using: function( position, feedback ) {
-          $( this ).css( position );
-          $( "<div>" )
-            .addClass( "arrow" )
-            .addClass( feedback.vertical )
-            .addClass( feedback.horizontal )
-            .appendTo( this );
-                }
-            }
-        });
     });
 </script>
 

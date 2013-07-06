@@ -15,6 +15,13 @@
 
                 <?php the_content(); ?>
             <?php endwhile; endif; //Loop ends ?>
+
+            <div style="float:left">
+                <?php previous_post('&laquo; &laquo; %', 'Previous', 'no'); ?>
+            </div>
+            <div style="float:right">
+                <?php next_post('% &raquo; &raquo; ', 'Next', 'no'); ?>
+            </div>
     </article>
 	</div>
 

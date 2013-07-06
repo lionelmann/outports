@@ -33,7 +33,7 @@
 
                         echo '<p class="large"><a href="' . get_permalink($recent["ID"]) . '" >' . wp_trim_words($recent["post_title"], 3). '</a></p>';
                         echo '<i style="color: #696969;">' . mysql2date('F j, Y', $recent["post_date"]) . '</i> | ';
-                        echo wp_trim_words($recent["post_excerpt"], 10) . '' . '<a href="' . get_permalink($recent["ID"]) . '" >' . 'more</a>';
+                        echo wp_trim_words($recent["post_excerpt"], 10) . '' . '<a href="' . get_permalink($recent["ID"]) . '" >' . '..more</a>';
 
                         }
                     ?>

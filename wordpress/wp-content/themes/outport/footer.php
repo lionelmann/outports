@@ -25,11 +25,14 @@
 		<div class="row">
         	<div class="large-10 columns">
           		<p class="small">&copy; Copyright © 2013 E.R.A. Architects Inc.</p>
-        	</div>
-        	<div class="large-2 columns">
-          		<p class="small">Crafted by <a href="https://www.vizify.com/lionel-mann/" target="_blank">Piksel</a></p>
                 <br>
         	</div>
+            <!--
+        	<div class="large-2 columns">
+          		<p class="small">Crafted by <a href="https://www.vizify.com/lionel-mann/" target="_blank">Piksel</a></p>
+                
+        	</div>
+        -->
       	</div>
     </div> 
 </div>
