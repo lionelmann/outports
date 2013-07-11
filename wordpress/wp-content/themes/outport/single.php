@@ -14,17 +14,20 @@
                 <?php endif; ?>
 
                 <?php the_content(); ?>
-                <hr>
-                <?php disqus_embed('cultureofoutports'); ?>
-            <?php endwhile; endif; //Loop ends ?>
-            <div style="padding: 10px 0 30px 0;">
-            <div style="float:left">
+                <div style="padding: 10px 0 20px 0;">
+                <div style="float:left">
                 <?php previous_post('&laquo; &laquo; %', 'Previous', 'no'); ?>
             </div>
             <div style="float:right">
                 <?php next_post('% &raquo; &raquo; ', 'Next', 'no'); ?>
             </div>
         </div>
+                <hr>
+                <?php disqus_embed('cultureofoutports'); ?>
+            <?php endwhile; endif; //Loop ends ?>
+            
+            
+        
 
     </article>
 	</div>
