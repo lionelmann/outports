@@ -14,6 +14,7 @@
                 <?php endif; ?>
 
                 <?php the_content(); ?>
+                <?php disqus_embed('cultureofoutports'); ?>
             <?php endwhile; endif; //Loop ends ?>
 
             <div style="float:left">
@@ -22,6 +23,8 @@
             <div style="float:right">
                 <?php next_post('% &raquo; &raquo; ', 'Next', 'no'); ?>
             </div>
+
+
     </article>
 	</div>
 
