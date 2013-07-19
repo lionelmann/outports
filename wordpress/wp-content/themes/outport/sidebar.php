@@ -56,5 +56,14 @@
 			<li><h5>OUTPORTS</h5></li>
 			<?php wp_list_pages($args) ?>
 		</ul>
+
+		<?php 
+			if(is_single()) : ?>
+		<ul>
+			<li><h5>CATEGORIES</h5></li>
+			<?php the_category(); ?>
+		</ul>
+		
+		<?php endif ?>
 	</aside>
 </div>

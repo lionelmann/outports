@@ -25,22 +25,30 @@
 
             <?php if (have_posts() ) : while (  have_posts() ) :  the_post(); ?>
 
+            <?php 
+                if ( has_post_thumbnail() ) { ?>
+                    
+                    <div style="width:280px; height:200px; overflow:hidden; float:left; margin: 15px 25px 35px 0;">
+                        <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail('home-feature', array('class' => 'alignleft')); ?></a>
+                    </div>
+
+            <?php } ?>
             
 
             <h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <hr>
-                
-                
+              
             <?php if ( !empty( $post->post_excerpt ) ) : ?>
-                <p class="large"><?php echo excerpt(20); ?></p>
                 <br>
+                <p><?php echo excerpt(20); ?></p>
+                <hr>
             <?php endif; ?>
 
             <?php endwhile; endif; //Loop ends ?>
  
-
-            <?php tmhtc_paginate(); ?>
-            <?php wp_reset_query(); ?>
+            <p>
+                <?php tmhtc_paginate(); ?>
+            </p>
+            
     </article>
 	</div>
 

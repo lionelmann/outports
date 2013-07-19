@@ -4,25 +4,39 @@
     <div class="large-8 offset-by-1 columns">
         <article>
             <?php 
-            $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
-            echo '<h1>' . $term->name . '</h1>'; ?>
+                $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
+                echo '<h1>' . $term->name . '</h1>'; 
+            ?>
+            
             <hr>
 
             <?php if (have_posts() ) : while (  have_posts() ) :  the_post(); ?>
 
-            <h3><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
+            <?php 
+                if ( has_post_thumbnail() ) { ?>
+                    
+                    <div style="width:280px; height:200px; overflow:hidden; float:left; margin: 15px 25px 35px 0;">
+                        <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail('home-feature', array('class' => 'alignleft')); ?></a>
+                    </div>
+
+            <?php } ?>
+
+            <h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
          
                     
             <?php if ( !empty( $post->post_excerpt ) ) : ?>
-                <p class="large"><?php echo excerpt(999); ?></p>
                 <br>
-                   <hr>
+                <p><?php echo excerpt(20); ?></p>
+                
+                <hr>
             <?php endif; ?>
 
             <?php endwhile; endif; //Loop ends ?>
-
-            <?php tmhtc_paginate(); ?>
-    </article>
+            
+            <p>
+                <?php tmhtc_paginate(); ?>
+            </p>
+        </article>
     </div>
 
 <?php get_sidebar(); ?>
