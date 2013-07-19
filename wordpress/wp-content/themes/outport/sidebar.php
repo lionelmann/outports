@@ -58,12 +58,17 @@
 		</ul>
 
 		<?php 
-			if(is_single()) : ?>
+		    $args2 = array(
+		        'orderby' => 'name',
+		        'order'   => 'ASC',
+		        'title_li'     => '',
+		    ); 
+		?>
+
 		<ul>
 			<li><h5>CATEGORIES</h5></li>
-			<?php the_category(); ?>
+			<?php wp_list_categories($args2); ?>
 		</ul>
-		
-		<?php endif ?>
+
 	</aside>
 </div>

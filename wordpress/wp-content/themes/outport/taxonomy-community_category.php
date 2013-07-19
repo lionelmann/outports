@@ -24,12 +24,13 @@
             <h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
          
                     
-            <?php if ( !empty( $post->post_excerpt ) ) : ?>
+            <?php if ( !empty( $post->post_excerpt ) ) { ?>
                 <br>
                 <p><?php echo excerpt(20); ?></p>
-                
+                <?php } else { ?>
+                <p><?php echo content(20); ?></p>
+                <?php } ?>
                 <hr>
-            <?php endif; ?>
 
             <?php endwhile; endif; //Loop ends ?>
             
