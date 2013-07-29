@@ -73,7 +73,7 @@
 
 		<ul>
 			
-			<li><h5><a href="#">ARCHIVES</a></h5></li>
+			<li><h5><a href="<?php bloginfo( 'url' ) ?>/archives">ARCHIVES</a></h5></li>
 		</ul>
 
 	</aside>
