@@ -68,6 +68,12 @@
 		<ul>
 			<li><h5>CATEGORIES</h5></li>
 			<?php wp_list_categories($args2); ?>
+			
+		</ul>
+
+		<ul>
+			
+			<li><h5><a href="#">ARCHIVES</a></h5></li>
 		</ul>
 
 	</aside>
